@@ -137,20 +137,20 @@ const Help = () => {
   };
 
   return (
-    <div className="w-full bg-[#FFFDF2] py-[5vh]">
+    <div className="w-full bg-[#FEFEFF] py-[5vh]">
       <div className="container px-[5vw] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-12">
         <div>
-          <h1 className="lg:text-[50px] text-[32px] text-[#043D12]">
+          <h1 className="lg:text-[50px] text-[32px] text-[#003087]">
             We’re Here to Help
           </h1>
-          <p className="text-[#6A7368] lg:text-[32px] text-[20px]">
+          <p className="text-[#003087] lg:text-[32px] text-[20px]">
             Have questions or feedback? Get in <br /> touch with us, and we’ll
             get back to you as soon as possible
           </p>
         </div>
         <div>
           <form
-            className="text-[#6A7368] bg-[#043D120D] rounded-[46px] p-10 flex flex-col gap-6"
+            className="text-[#003087] bg-[#043D120D] rounded-[46px] p-10 flex flex-col gap-6"
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col gap-2">
@@ -230,7 +230,7 @@ const Help = () => {
                 />
                 <label
                   htmlFor="fileUpload"
-                  className="cursor-pointer text-[#6A7368] hover:text-[#043D12]"
+                  className="cursor-pointer text-[#003087] hover:text-[#003087]"
                 >
                   Upload a file
                 </label>
@@ -240,7 +240,7 @@ const Help = () => {
 
             <button
               type="submit"
-              className={`text-[16px] text-[#FFFDF2] bg-[#043D12] hover:bg-[#043D12]/75 rounded-[16px] h-[50px] mt-8 ${
+              className={`text-[16px] text-[#FEFEFF] bg-[#003087] hover:bg-[#003087]/75 rounded-[16px] h-[50px] mt-8 ${
                 isSubmitting ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={isSubmitting}

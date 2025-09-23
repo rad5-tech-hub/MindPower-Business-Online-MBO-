@@ -116,7 +116,7 @@ const ContactDropdown = ({ socialLinks = {}, profileId, onClose }) => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#043D12] to-[#02530c] px-6 py-3 text-white text-sm font-semibold shadow-md hover:shadow-lg transition-shadow"
+        className="w-full flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#043D12] to-[#002f87d5] px-6 py-3 text-white text-sm font-semibold shadow-md hover:shadow-lg transition-shadow"
       >
         Contact
         <motion.span
@@ -207,12 +207,12 @@ const Modal = ({ product, onClose }) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={onClose}
-          className="absolute z-50 top-4 right-4 text-gray-600 hover:text-[#043D12] text-xl bg-white/80 rounded-full p-2 shadow-sm"
+          className="absolute z-50 top-4 right-4 text-gray-600 hover:text-[#003087] text-xl bg-white/80 rounded-full p-2 shadow-sm"
         >
           <FaTimes />
         </motion.button>
 
-        <div className="md:w-1/2 p-6 md:p-8 bg-gradient-to-b from-[#FFFDF2] to-[#E8EFE5]">
+        <div className="md:w-1/2 p-6 md:p-8 bg-gradient-to-b from-[#FEFEFF] to-[#E8EFE5]">
           <img
             src={imageUrl || profile.businesImg || BusinessImg}
             alt={name || profile.businessName || "Business"}
@@ -222,14 +222,14 @@ const Modal = ({ product, onClose }) => {
         </div>
 
         <div className="md:w-1/2 p-6 md:p-8 flex flex-col gap-5 bg-white overflow-y-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#043D12] leading-tight">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#003087] leading-tight">
             {name || "Unnamed Product"}
           </h2>
           <div className="space-y-3 text-sm text-gray-700">
             <p>
-              <strong className="text-[#043D12]">Business:</strong>
+              <strong className="text-[#003087]">Business:</strong>
               <span
-                className="cursor-pointer underline hover:text-[#02530c] transition-colors"
+                className="cursor-pointer underline hover:text-[#002f87d5] transition-colors"
                 onClick={handleViewProfile}
               >
                 {" "}
@@ -237,15 +237,15 @@ const Modal = ({ product, onClose }) => {
               </span>
             </p>
             <p>
-              <strong className="text-[#043D12]">Category:</strong>{" "}
+              <strong className="text-[#003087]">Category:</strong>{" "}
               {category?.name || "No Category"}
             </p>
             <p>
-              <strong className="text-[#043D12]">Location:</strong>{" "}
+              <strong className="text-[#003087]">Location:</strong>{" "}
               {profile.location || "Not specified"}
             </p>
             <p className="leading-relaxed">
-              <strong className="text-[#043D12]">Description:</strong>{" "}
+              <strong className="text-[#003087]">Description:</strong>{" "}
               {description || "No product description available"}
             </p>
           </div>
@@ -255,7 +255,7 @@ const Modal = ({ product, onClose }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleViewProfile}
-              className="flex-1 rounded-full bg-[#043D12] text-white px-6 py-3 text-sm font-semibold hover:bg-[#02530c] transition-colors shadow-md"
+              className="flex-1 rounded-full bg-[#003087] text-white px-6 py-3 text-sm font-semibold hover:bg-[#002f87d5] transition-colors shadow-md"
             >
               View Profile
             </motion.button>
@@ -413,7 +413,7 @@ const SearchPage = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen bg-gradient-to-b from-[#FFFDF2] to-[#E8EFE5]">
+      <div className="flex justify-center items-center h-screen bg-gradient-to-b from-[#FEFEFF] to-[#E8EFE5]">
         <div className="w-10 h-10 border-4 border-[#043D12] border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
@@ -426,7 +426,7 @@ const SearchPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="min-h-[80vh] bg-gradient-to-b from-[#FFFDF2] to-[#E8EFE5] flex flex-col items-center justify-center px-[5vw]"
+          className="min-h-[80vh] bg-gradient-to-b from-[#FEFEFF] to-[#E8EFE5] flex flex-col items-center justify-center px-[5vw]"
         >
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-lg w-full text-center">
             <Player
@@ -435,7 +435,7 @@ const SearchPage = () => {
               src="https://lottie.host/7fd33a4f-2e59-4f34-ba0c-4af37814586e/Cq1qkcf16G.lottie"
               style={{ height: "150px", width: "150px", margin: "0 auto" }}
             />
-            <h2 className="text-2xl font-bold text-[#043D12] mt-6">
+            <h2 className="text-2xl font-bold text-[#003087] mt-6">
               No Products Available Yet
             </h2>
             <p className="text-sm text-gray-600 mt-3 max-w-md mx-auto">
@@ -448,13 +448,13 @@ const SearchPage = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => window.location.reload()}
-                className="flex-1 bg-[#043D12] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#02530c] transition-colors shadow-md"
+                className="flex-1 bg-[#003087] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#002f87d5] transition-colors shadow-md"
               >
                 Check Again
               </motion.button>
               <Link
                 to="/community/all-businesses"
-                className="flex-1 bg-white text-[#043D12] px-6 py-3 rounded-full text-sm font-semibold border border-[#043D12] hover:bg-gray-100 transition-colors shadow-md"
+                className="flex-1 bg-white text-[#003087] px-6 py-3 rounded-full text-sm font-semibold border border-[#043D12] hover:bg-gray-100 transition-colors shadow-md"
               >
                 Explore Businesses
               </Link>
@@ -468,19 +468,19 @@ const SearchPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#FFFDF2] to-[#E8EFE5] font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-[#FEFEFF] to-[#E8EFE5] font-sans">
       <div className="container px-[5vw] mx-auto pb-8">
         <header className="border-[1px] border-gray-200 flex flex-col gap-2 mb-6 sticky top-0 z-50 bg-white/80 backdrop-blur-md py-4 md:pb-3 rounded-lg shadow-sm md:shadow-md px-2 md:px-3 md:mt-0">
           <div className="relative">
             <input
               type="text"
-              className="w-full pl-10 pr-4 py-2 text-sm rounded-full bg-gray-100 text-[#043D12] placeholder-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#043D12]/50 transition-all duration-300"
+              className="w-full pl-10 pr-4 py-2 text-sm rounded-full bg-gray-100 text-[#003087] placeholder-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#043D12]/50 transition-all duration-300"
               placeholder="Search products, businesses, or services聭
 services..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <CiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#043D12] text-lg" />
+            <CiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#003087] text-lg" />
           </div>
 
           <div className="flex gap-2 flex-wrap">
@@ -490,7 +490,7 @@ services..."
                 setFilterCategory("");
                 setFilterLocation("");
               }}
-              className="flex items-center gap-1 px-3 py-1.5 text-sm text-[#043D12] bg-white border border-gray-300 rounded-full shadow-sm hover:bg-gray-100 transition-colors"
+              className="flex items-center gap-1 px-3 py-1.5 text-sm text-[#003087] bg-white border border-gray-300 rounded-full shadow-sm hover:bg-gray-100 transition-colors"
             >
               <FaFilter className="text-xs" />
               Clear Filters
@@ -505,7 +505,7 @@ services..."
                     return newState;
                   });
                 }}
-                className="flex items-center gap-1 px-3 py-1.5 text-sm text-[#043D12] bg-white border border-gray-300 rounded-full shadow-sm hover:bg-gray-100 transition-colors active:bg-gray-200"
+                className="flex items-center gap-1 px-3 py-1.5 text-sm text-[#003087] bg-white border border-gray-300 rounded-full shadow-sm hover:bg-gray-100 transition-colors active:bg-gray-200"
               >
                 <MdOutlineCategory className="text-xs" />
                 {filterCategory || "Category"}
@@ -532,8 +532,8 @@ services..."
                         className={`block w-full text-left px-4 py-2 text-sm ${
                           filterCategory ===
                           (category === "All Categories" ? "" : category)
-                            ? "bg-[#043D12] text-white"
-                            : "text-[#043D12] hover:bg-gray-100"
+                            ? "bg-[#003087] text-white"
+                            : "text-[#003087] hover:bg-gray-100"
                         } transition-colors`}
                       >
                         {category}
@@ -542,7 +542,7 @@ services..."
                     {getUniqueCategories.length > 5 && (
                       <button
                         onClick={() => setShowAllCategories(!showAllCategories)}
-                        className="w-full text-left px-4 py-2 text-sm text-[#043D12] hover:bg-gray-100 font-medium flex items-center gap-2"
+                        className="w-full text-left px-4 py-2 text-sm text-[#003087] hover:bg-gray-100 font-medium flex items-center gap-2"
                       >
                         {showAllCategories ? (
                           <span>
@@ -569,7 +569,7 @@ services..."
                     return newState;
                   });
                 }}
-                className="flex items-center gap-1 px-3 py-1.5 text-sm text-[#043D12] bg-white border border-gray-300 rounded-full shadow-sm hover:bg-gray-100 transition-colors active:bg-gray-200"
+                className="flex items-center gap-1 px-3 py-1.5 text-sm text-[#003087] bg-white border border-gray-300 rounded-full shadow-sm hover:bg-gray-100 transition-colors active:bg-gray-200"
               >
                 <IoLocationOutline className="text-xs" />
                 {filterLocation || "Location"}
@@ -596,8 +596,8 @@ services..."
                         className={`block w-full text-left px-4 py-2 text-sm ${
                           filterLocation ===
                           (location === "All Locations" ? "" : location)
-                            ? "bg-[#043D12] text-white"
-                            : "text-[#043D12] hover:bg-gray-100"
+                            ? "bg-[#003087] text-white"
+                            : "text-[#003087] hover:bg-gray-100"
                         } transition-colors`}
                       >
                         {location}
@@ -606,7 +606,7 @@ services..."
                     {getUniqueLocations.length > 5 && (
                       <button
                         onClick={() => setShowAllLocations(!showAllLocations)}
-                        className="w-full text-left px-4 py-2 text-sm text-[#043D12] hover:bg-gray-100 font-medium flex items-center gap-2"
+                        className="w-full text-left px-4 py-2 text-sm text-[#003087] hover:bg-gray-100 font-medium flex items-center gap-2"
                       >
                         {showAllLocations ? (
                           <span>
@@ -626,7 +626,7 @@ services..."
 
             <Link
               to="/community/all-businesses"
-              className="flex items-center gap-1 px-3 py-1.5 text-sm text-[#043D12] bg-white border border-gray-300 rounded-full shadow-sm hover:bg-gray-100 transition-colors"
+              className="flex items-center gap-1 px-3 py-1.5 text-sm text-[#003087] bg-white border border-gray-300 rounded-full shadow-sm hover:bg-gray-100 transition-colors"
             >
               All Businesses
             </Link>
@@ -634,7 +634,7 @@ services..."
         </header>
 
         <div className="flex-1">
-          <h1 className="text-2xl font-semibold text-[#043D12] mb-6">
+          <h1 className="text-2xl font-semibold text-[#003087] mb-6">
             All Products
           </h1>
           {filterProducts.length > 0 ? (
@@ -653,7 +653,7 @@ services..."
                         className="w-10 h-10 rounded-full object-cover"
                         onError={(e) => (e.target.src = BusinessImg)}
                       />
-                      <h3 className="text-sm font-semibold text-[#043D12] truncate">
+                      <h3 className="text-sm font-semibold text-[#003087] truncate">
                         {product.profile.businessName || "Unknown Business"}
                       </h3>
                     </div>
@@ -672,7 +672,7 @@ services..."
                       onError={(e) => (e.target.src = BusinessImg)}
                     />
                     <div className="mt-3">
-                      <p className="text-base font-medium text-[#043D12] truncate">
+                      <p className="text-base font-medium text-[#003087] truncate">
                         {product.name || "No Product Listed"}
                       </p>
                       <p className="text-xs text-gray-600 mt-1">
@@ -694,7 +694,7 @@ services..."
                 src="https://lottie.host/7fd33a4f-2e59-4f34-ba0c-4af37814586e/Cq1qkcf16G.lottie"
                 style={{ height: "200px", width: "200px" }}
               />
-              <h2 className="text-xl font-bold text-[#043D12] mt-4">
+              <h2 className="text-xl font-bold text-[#003087] mt-4">
                 No Results Found
               </h2>
               <p className="text-sm text-gray-600 text-center max-w-md mt-2">
@@ -702,7 +702,7 @@ services..."
                 businesses that match your needs.
               </p>
               <button
-                className="mt-6 bg-[#043D12] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#02530c] transition-colors"
+                className="mt-6 bg-[#003087] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#002f87d5] transition-colors"
                 onClick={() => {
                   setSearchQuery("");
                   setFilterCategory("");

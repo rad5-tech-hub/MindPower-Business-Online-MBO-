@@ -206,19 +206,19 @@ const Header = () => {
           name: "Dashboard",
           path: dashboardRoute,
           className:
-            "border border-white rounded-[39px] lg:ml-8 px-8 py-2 hover:bg-white hover:text-[#02530c]",
+            "border border-white rounded-[39px] lg:ml-8 px-8 py-2 hover:bg-white hover:text-[#002f87d5]",
         }
       : {
           name: "Log In",
           path: "/login",
           className:
-            "border border-white rounded-[39px] lg:ml-8 px-8 py-2 hover:bg-white hover:text-[#02530c]",
+            "border border-white rounded-[39px] lg:ml-8 px-8 py-2 hover:bg-white hover:text-[#002f87d5]",
         },
   ].filter(Boolean);
 
   return (
     <div
-      className={`global-header relative bg-[#FFFDF2] py-[3vh] z-[70] ${
+      className={`global-header relative bg-[#FEFEFF] py-[3vh] z-[70] ${
         location.pathname.startsWith("/community/profile/") ? "pb-[40px]" : ""
       }`}
     >
@@ -256,7 +256,7 @@ const Header = () => {
 
       <div className="container mx-auto px-[5vw]">
         <div
-          className={`bg-[#043D12] px-5 md:px-12 py-4 flex justify-between items-center rounded-[48px] shadow-lg relative z-[110] ${
+          className={`bg-[#003087] px-5 md:px-12 py-4 flex justify-between items-center rounded-[48px] shadow-lg relative z-[110] ${
             location.pathname.startsWith("/community/profile/")
               ? "mb-[50px]"
               : ""
@@ -277,7 +277,7 @@ const Header = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
-                className="absolute top-[13vh] left-0 w-full bg-[#FFFDF2] flex flex-col items-center py-6 shadow-lg md:hidden rounded-b-[40px] z-[120]"
+                className="absolute top-[13vh] left-0 w-full bg-[#FEFEFF] flex flex-col items-center py-6 shadow-lg md:hidden rounded-b-[40px] z-[120]"
               >
                 <nav className="flex flex-col items-center gap-6 w-full">
                   {navItems.map((item, index) => (
@@ -296,8 +296,8 @@ const Header = () => {
                           (item.path === "/community" &&
                             location.pathname.startsWith("/community")) ||
                           location.pathname === item.path
-                            ? "text-[#02530c] font-bold border-b-2 border-[#02530c]"
-                            : "text-[#043D12] hover:text-[#02530c]"
+                            ? "text-[#002f87d5] font-bold border-b-2 border-[#002f87d5]"
+                            : "text-[#003087] hover:text-[#002f87d5]"
                         } ${item.className || ""}`}
                       >
                         {item.name}

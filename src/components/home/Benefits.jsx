@@ -18,9 +18,9 @@ const fadeInVariants = {
 
 const Benefits = () => {
   return (
-    <div className="w-full flex justify-center items-center py-18 bg-[#FFFDF2] overflow-hidden">
+    <div className="w-full flex justify-center items-center py-18 bg-[#FEFEFF] overflow-hidden">
       <motion.div
-        className="container mx-auto px-[5vw] flex flex-col gap-14 text-[#043D12]"
+        className="container mx-auto px-[5vw] flex flex-col gap-14 text-[#003087]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
@@ -96,7 +96,7 @@ const Benefits = () => {
                   {title}
                 </motion.h1>
                 <motion.p
-                  className="md:text-[20px] text-[18px] text-[#6A7368]"
+                  className="md:text-[20px] text-[18px] text-[#003087]"
                   variants={fadeInVariants}
                 >
                   {text}

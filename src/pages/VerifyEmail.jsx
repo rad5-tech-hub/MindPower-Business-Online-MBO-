@@ -93,17 +93,15 @@ const VerifyEmail = () => {
 
   return (
     <div
-      className="min-h-screen w-full flex flex-col justify-center items-center p-4 bg-cover bg-center"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgImage})`,
-      }}
+      className="min-h-screen bg-[#003087] w-full flex flex-col justify-center items-center p-4 bg-cover bg-center"
+
     >
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
         variants={animations.slideUp}
-        className="max-w-md w-full bg-white/90 rounded-2xl shadow-lg p-8 text-[#043D12]"
+        className="max-w-md w-full bg-white/90 rounded-2xl shadow-lg p-8 text-[#003087]"
       >
         <div className="flex justify-center mb-6">
           <img src={Logo} alt="Project Logo" className="h-12 object-contain" />
@@ -111,14 +109,14 @@ const VerifyEmail = () => {
         <h2 className="text-2xl font-medium text-center mb-2">
           Verify Your Email
         </h2>
-        <p className="text-[#6A7368] text-center text-sm mb-6">
+        <p className="text-[#003087] text-center text-sm mb-6">
           Connect. Showcase. Shop. Grow.
         </p>
 
         {isVerifying ? (
           <div className="flex flex-col items-center space-y-4">
             <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-[#043D12] border-solid"></div>
-            <p className="text-lg font-semibold text-[#043D12] animate-pulse">
+            <p className="text-lg font-semibold text-[#003087] animate-pulse">
               Verifying your email...
             </p>
           </div>
@@ -143,7 +141,7 @@ const VerifyEmail = () => {
             <h3 className="text-xl font-bold text-red-600">
               Verification Failed
             </h3>
-            <p className="text-[#6A7368] text-sm">
+            <p className="text-[#003087] text-sm">
               The verification link is invalid or has expired. Enter your email
               to receive a new link.
             </p>
@@ -152,14 +150,14 @@ const VerifyEmail = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 border-2 border-[#043D12]/20 rounded-lg focus:ring-2 focus:ring-[#043D12] focus:outline-none transition-all duration-300 text-[#043D12]"
+              className="w-full p-3 border-2 border-[#043D12]/20 rounded-lg focus:ring-2 focus:ring-[#043D12] focus:outline-none transition-all duration-300 text-[#003087]"
             />
             <motion.button
               variants={animations.buttonHover}
               whileHover="hover"
               whileTap="tap"
               onClick={handleResendVerification}
-              className="w-full bg-[#043D12] text-white py-3 rounded-[48px] font-semibold hover:bg-[#032a0d] transition-all duration-300 shadow-md border-2 border-[#043D12] cursor-pointer"
+              className="w-full bg-[#003087] text-white py-3 rounded-[48px] font-semibold hover:bg-[#032a0d] transition-all duration-300 shadow-md border-2 border-[#043D12] cursor-pointer"
             >
               Resend Verification Email
             </motion.button>
@@ -167,7 +165,7 @@ const VerifyEmail = () => {
         ) : (
           <div className="flex flex-col items-center space-y-4">
             <svg
-              className="w-12 h-12 text-[#043D12] animate-bounce"
+              className="w-12 h-12 text-[#003087] animate-bounce"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -180,7 +178,7 @@ const VerifyEmail = () => {
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            <p className="text-lg font-semibold text-[#043D12]">
+            <p className="text-lg font-semibold text-[#003087]">
               Email verified! Redirecting...
             </p>
           </div>

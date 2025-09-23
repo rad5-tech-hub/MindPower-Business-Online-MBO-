@@ -66,14 +66,14 @@ const AddBusiness = () => {
       whileInView="visible"
       viewport={{ once: false }}
       variants={animations.scaleUp}
-      className="w-full lg:h-[50vh] max-lg:py-[7vh] flex justify-center items-center bg-[#043D12]"
+      className="w-full lg:h-[50vh] max-lg:py-[7vh] flex justify-center items-center bg-[#003087]"
     >
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
         variants={animations.fadeIn}
-        className="container mx-auto px-[5vw] h-fit flex flex-col gap-10 text-[#FFFDF2] text-center lg:leading-6"
+        className="container mx-auto px-[5vw] h-fit flex flex-col gap-10 text-[#FEFEFF] text-center lg:leading-6"
       >
         <motion.h1
           initial="hidden"
@@ -97,7 +97,7 @@ const AddBusiness = () => {
         <div className="w-fit h-fit mx-auto">
           <a
             href="/create-account"
-            className="bg-[#FFFDF2] text-[#043D12] rounded-[48px] shadow-lg lg:text-[18px] text-[14px] md:px-8 px-4 py-3 md:py-4 w-fit mx-auto font-medium"
+            className="bg-[#FEFEFF] text-[#003087] rounded-[48px] shadow-lg lg:text-[18px] text-[14px] md:px-8 px-4 py-3 md:py-4 w-fit mx-auto font-medium"
           >
             Add Your Business
           </a>

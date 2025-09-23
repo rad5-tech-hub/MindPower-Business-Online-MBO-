@@ -236,9 +236,9 @@ const ContactAndSocials = () => {
 
   const Loader = () => (
     <div className="flex space-x-2 items-center">
-      <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce"></div>
-      <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-200"></div>
-      <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-400"></div>
+      <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce"></div>
+      <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-200"></div>
+      <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-400"></div>
     </div>
   );
 
@@ -251,7 +251,7 @@ const ContactAndSocials = () => {
   }
 
   return (
-    <div className="w-full text-[#6A7368] flex flex-col gap-10">
+    <div className="w-full text-[#003087] flex flex-col gap-10">
       <EditHeader />
       <ToastContainer
         position="top-right"
@@ -266,12 +266,12 @@ const ContactAndSocials = () => {
       />
 
       <div className="container px-[5vw] mx-auto">
-        <h2 className="text-[16px] text-[#043D12] font-medium border-b-[1px] border-[#6A7368] px-2 py-1 w-fit">
+        <h2 className="text-[16px] text-[#003087] font-medium border-b-[1px] border-[#6A7368] px-2 py-1 w-fit">
           Contact & Socials
         </h2>
 
         <div className="socials flex flex-col gap-6">
-          <p className="text-[12px] text-[#043D12] font-medium border-b-[1px] border-[#6A7368] px-2 py-1 w-fit">
+          <p className="text-[12px] text-[#003087] font-medium border-b-[1px] border-[#6A7368] px-2 py-1 w-fit">
             ON THE WEB
           </p>
 
@@ -328,7 +328,7 @@ const ContactAndSocials = () => {
                   </div>
                   <button
                     onClick={() => handleSocialLinkClick(platform)}
-                    className="text-[14px] border-[1px] rounded-[11px] shadow px-4 py-2 flex items-center gap-2 border-[#6A7368] hover:bg-[#043D12] hover:text-white cursor-pointer"
+                    className="text-[14px] border-[1px] rounded-[11px] shadow px-4 py-2 flex items-center gap-2 border-[#6A7368] hover:bg-[#003087] hover:text-white cursor-pointer"
                   >
                     {profileData.socialLinks[platform]
                       ? "Edit link"
@@ -340,7 +340,7 @@ const ContactAndSocials = () => {
 
             {/* Contact Form Section */}
             <form onSubmit={handleSubmit}>
-              <h2 className="text-[#043D12] font-medium text-[12px] border-b-[1px] border-[#6A7368] pb-1 w-fit px-2">
+              <h2 className="text-[#003087] font-medium text-[12px] border-b-[1px] border-[#6A7368] pb-1 w-fit px-2">
                 CONTACT
               </h2>
 
@@ -368,7 +368,7 @@ const ContactAndSocials = () => {
                   ].map(({ field, label, placeholder, type }) => (
                     <div
                       key={field}
-                      className="text-[#6A7368] flex flex-col gap-2"
+                      className="text-[#003087] flex flex-col gap-2"
                     >
                       <label>{label}</label>
                       <div className="flex justify-between gap-8 md:gap-16">
@@ -391,7 +391,7 @@ const ContactAndSocials = () => {
                           onClick={() =>
                             setEditField(editField === field ? null : field)
                           }
-                          className="rounded-[11px] text-[14px] px-4 py-2 shadow-lg flex items-center justify-between gap-2 border-[1px] border-[#6A7368] hover:bg-[#043D12] hover:text-white cursor-pointer"
+                          className="rounded-[11px] text-[14px] px-4 py-2 shadow-lg flex items-center justify-between gap-2 border-[1px] border-[#6A7368] hover:bg-[#003087] hover:text-white cursor-pointer"
                         >
                           <FiEdit3 className="text-[18px]" />
                           {editField === field ? "Cancel" : "Edit"}
@@ -414,17 +414,17 @@ const ContactAndSocials = () => {
                       });
                       setEditField(null);
                     }}
-                    className="border-[1px] border-[#6A7368] text-[#6A7368] rounded-[11px] text-[15px] hover:text-white px-2 lg:px-8 py-3 shadow-lg hover:bg-[#043D12]"
+                    className="border-[1px] border-[#6A7368] text-[#003087] rounded-[11px] text-[15px] hover:text-white px-2 lg:px-8 py-3 shadow-lg hover:bg-[#003087]"
                   >
                     Discard Changes
                   </button>
                   <button
                     type="submit"
                     disabled={submitting}
-                    className={`border-[1px] border-[#6A7368] text-[#6A7368] rounded-[11px] text-[15px] px-2 lg:px-8 py-3 shadow-lg flex items-center gap-2 ${
+                    className={`border-[1px] border-[#6A7368] text-[#003087] rounded-[11px] text-[15px] px-2 lg:px-8 py-3 shadow-lg flex items-center gap-2 ${
                       submitting
                         ? "cursor-not-allowed opacity-50"
-                        : "hover:text-white hover:bg-[#043D12]"
+                        : "hover:text-white hover:bg-[#003087]"
                     }`}
                   >
                     {submitting ? "Saving..." : "Save Changes"}
@@ -463,7 +463,7 @@ const ContactAndSocials = () => {
                   Cancel
                 </button>
                 <button
-                  className="px-4 py-2 bg-[#043D12] text-white rounded hover:bg-[#03280E]"
+                  className="px-4 py-2 bg-[#003087] text-white rounded hover:bg-[#03280E]"
                   onClick={() => handleSocialSubmit(showSocialModal)}
                 >
                   {profileData.socialLinks[showSocialModal] ? "Update" : "Save"}

@@ -10,7 +10,7 @@ const TermsOfService = () => {
   return (
     <>
       <Header />
-      <div className=" bg-[#FFFDF2] py-10">
+      <div className=" bg-[#FEFEFF] py-10">
         <div className="container px-[5vw] mx-auto flex max-lg:flex-col justify-center">
           {/* Sidebar */}
           <aside className="lg:w-[20%] h-full px-6 flex flex-col justify-center">

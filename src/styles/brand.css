@@ -1,0 +1,67 @@
+/* src/styles/brand.css */
+/* Light theme (default) */
+:root {
+  /* Brand blues (primary = 700) */
+  --brand-50:  #f5f7ff;
+  --brand-100: #e9efff;
+  --brand-200: #cddaff;
+  --brand-300: #a3baff;
+  --brand-400: #6d90ff;
+  --brand-500: #3463f0;
+  --brand-600: #1346c9;
+  --brand-700: #003087; /* your primary */
+  --brand-800: #00266b;
+  --brand-900: #001a4a;
+
+  /* Surfaces */
+  --surface:        #fefeff;  /* app background */
+  --surface-soft:   #f7f8ff;  /* subtle cards/sections */
+  --surface-muted:  #eef1ff;  /* badges, chips */
+
+  /* Text colors (accessible on light bg) */
+  --text-strong: #111827;
+  --text-base:   #374151;
+  --text-muted:  #6b7280;
+
+  /* Semantic (optional) – tune if needed */
+  --success-50:  #ecfdf5;
+  --success-200: #a7f3d0;
+  --success-600: #059669;
+  --warning-50:  #fffbeb;
+  --warning-200: #fde68a;
+  --warning-700: #b45309;
+  --danger-50:   #fef2f2;
+  --danger-200:  #fecaca;
+  --danger-600:  #dc2626;
+}
+
+/* Dark mode support (optional) */
+.dark {
+  --surface:       #0b1020;
+  --surface-soft:  #11162a;
+  --surface-muted: #1b2140;
+
+  --text-strong: #f9fafb;
+  --text-base:   #e5e7eb;
+  --text-muted:  #9ca3af;
+
+  --brand-50:  #0f1a39;
+  --brand-100: #16214a;
+  --brand-200: #1f2b5f;
+  --brand-300: #273673;
+  --brand-400: #2f4189;
+  --brand-500: #3850ab;
+  --brand-600: #2a4192;
+  --brand-700: #003087; /* keep the anchor shade */
+  --brand-800: #001e59;
+  --brand-900: #000f2c;
+}
+
+/* Convenience classes (useful right away) */
+.bg-surface        { background-color: var(--surface) !important; }
+.bg-surface-soft   { background-color: var(--surface-soft) !important; }
+.bg-surface-muted  { background-color: var(--surface-muted) !important; }
+
+.text-strong { color: var(--text-strong) !important; }
+.text-base   { color: var(--text-base) !important; }
+.text-muted  { color: var(--text-muted) !important; }

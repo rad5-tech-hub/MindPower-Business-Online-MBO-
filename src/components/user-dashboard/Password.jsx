@@ -188,14 +188,14 @@ const Password = () => {
   // Animated Loader Component
   const Loader = () => (
     <div className="flex space-x-2 items-center">
-      <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce"></div>
-      <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-200"></div>
-      <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-400"></div>
+      <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce"></div>
+      <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-200"></div>
+      <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-400"></div>
     </div>
   );
 
   return (
-    <div className="w-full text-[#6A7368] flex flex-col gap-10 justify-start">
+    <div className="w-full text-[#003087] flex flex-col gap-10 justify-start">
       <EditHeader />
       <ToastContainer
         position="top-right"
@@ -219,10 +219,10 @@ const Password = () => {
           className="lg:w-[70%] lg:mx-auto flex flex-col gap-8 mt-4"
           onSubmit={handleSubmit}
         >
-          <h2 className="text-[16px] text-[#043D12] font-medium border-b-[1px] border-[#6A7368] py-1 w-fit">
+          <h2 className="text-[16px] text-[#003087] font-medium border-b-[1px] border-[#6A7368] py-1 w-fit">
             Change Password
           </h2>
-          <div className="text-[#6A7368] flex flex-col gap-2">
+          <div className="text-[#003087] flex flex-col gap-2">
             <label>Current Password</label>
             <div className="relative">
               <input
@@ -237,13 +237,13 @@ const Password = () => {
               <button
                 type="button"
                 onClick={() => togglePasswordVisibility("oldPassword")}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#6A7368] hover:text-[#043D12]"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#003087] hover:text-[#003087]"
               >
                 {showPasswords.oldPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
           </div>
-          <div className="text-[#6A7368] flex flex-col gap-2">
+          <div className="text-[#003087] flex flex-col gap-2">
             <label>New Password</label>
             <div className="relative">
               <input
@@ -258,13 +258,13 @@ const Password = () => {
               <button
                 type="button"
                 onClick={() => togglePasswordVisibility("newPassword")}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#6A7368] hover:text-[#043D12]"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#003087] hover:text-[#003087]"
               >
                 {showPasswords.newPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
           </div>
-          <div className="text-[#6A7368] flex flex-col gap-2">
+          <div className="text-[#003087] flex flex-col gap-2">
             <label>Confirm Password</label>
             <div className="relative">
               <input
@@ -279,7 +279,7 @@ const Password = () => {
               <button
                 type="button"
                 onClick={() => togglePasswordVisibility("confirmPassword")}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#6A7368] hover:text-[#043D12]"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#003087] hover:text-[#003087]"
               >
                 {showPasswords.confirmPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
@@ -289,10 +289,10 @@ const Password = () => {
             <button
               type="submit"
               disabled={submitting}
-              className={`border-[1px] border-[#6A7368] text-[#6A7368] rounded-[11px] text-[15px] px-2 lg:px-8 py-3 shadow-lg flex items-center gap-2 ${
+              className={`border-[1px] border-[#6A7368] text-[#003087] rounded-[11px] text-[15px] px-2 lg:px-8 py-3 shadow-lg flex items-center gap-2 ${
                 submitting
                   ? "cursor-not-allowed opacity-50"
-                  : "hover:text-white hover:bg-[#043D12]"
+                  : "hover:text-white hover:bg-[#003087]"
               }`}
             >
               {submitting ? "Saving..." : "Save Changes"}

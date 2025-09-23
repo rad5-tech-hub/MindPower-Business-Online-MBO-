@@ -107,7 +107,7 @@ const Subscription = () => {
       {[...Array(3)].map((_, i) => (
         <div
           key={i}
-          className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce"
+          className="w-3 h-3 bg-[#003087] rounded-full animate-bounce"
           style={{ animationDelay: `${i * 200}ms` }}
         />
       ))}
@@ -123,22 +123,22 @@ const Subscription = () => {
   }
 
   return (
-    <div className="w-full text-[#6A7368] flex flex-col gap-10 relative">
+    <div className="w-full text-[#003087] flex flex-col gap-10 relative">
       <EditHeader />
       <ToastContainer position="top-right" autoClose={5000} />
       <div className="container px-[5vw] mx-auto">
-        <h2 className="text-[16px] text-[#043D12] font-medium border-b-[1px] border-[#6A7368] px-2 py-1 w-fit">
+        <h2 className="text-[16px] text-[#003087] font-medium border-b-[1px] border-[#6A7368] px-2 py-1 w-fit">
           Manage Subscription
         </h2>
 
         <div className="subscription-board mt-6">
           <div className="bg-[#043D121A] flex items-center px-8 h-[30vh]">
             <div>
-              <p className="text-[#043D12] text-[20px]">Your Current Plan</p>
-              <p className="text-[18px] font-semibold text-[#043D12] mt-2">
+              <p className="text-[#003087] text-[20px]">Your Current Plan</p>
+              <p className="text-[18px] font-semibold text-[#003087] mt-2">
                 {subscriptionData.planName} - {subscriptionData.price}
               </p>
-              <p className="text-[#043D12] text-[16px] mt-2">
+              <p className="text-[#003087] text-[16px] mt-2">
                 Status:{" "}
                 <span
                   className={`font-semibold ${
@@ -153,7 +153,7 @@ const Subscription = () => {
             </div>
           </div>
 
-          <div className="w-full bg-[#043D12] grid md:grid-cols-2 px-8 py-8 text-[#FFFDF2] max-lg:gap-6">
+          <div className="w-full bg-[#003087] grid md:grid-cols-2 px-8 py-8 text-[#FEFEFF] max-lg:gap-6">
             <ul className="list-disc pl-5">
               <li>Access to all services</li>
               <li>Unlimited usage</li>
@@ -161,7 +161,7 @@ const Subscription = () => {
             </ul>
 
             <div className="w-full flex items-center justify-center">
-              <button className="max-lg:w-full flex items-center max-lg:justify-center text-[14px] text-[#FFFDF2] rounded-[11px] shadow px-2 sm:px-4 py-4 gap-2 bg-[#6A736899]">
+              <button className="max-lg:w-full flex items-center max-lg:justify-center text-[14px] text-[#FEFEFF] rounded-[11px] shadow px-2 sm:px-4 py-4 gap-2 bg-[#6A736899]">
                 <ImNotification className="text-[20px]" />
                 Next billing date: {subscriptionData.nextBillingDate}
               </button>
@@ -176,15 +176,15 @@ const Subscription = () => {
               disabled={subscribeLoading}
               className={`flex items-center justify-center text-[15px] px-8 py-3 rounded-[11px] shadow-lg transition-all duration-300 ${
                 subscribeLoading
-                  ? "bg-[#043D12]/50 text-[#FFFDF2]/50 cursor-not-allowed"
-                  : "bg-[#043D12] text-[#FFFDF2] hover:bg-[#032d0e]"
+                  ? "bg-[#003087]/50 text-[#FEFEFF]/50 cursor-not-allowed"
+                  : "bg-[#003087] text-[#FEFEFF] hover:bg-[#003087]"
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               {subscribeLoading ? (
                 <div className="flex space-x-2 items-center">
-                  <div className="w-4 h-4 border-2 border-[#FFFDF2] border-t-transparent rounded-full animate-spin" />
+                  <div className="w-4 h-4 border-2 border-[#FEFEFF] border-t-transparent rounded-full animate-spin" />
                   <span>Redirecting...</span>
                 </div>
               ) : (
@@ -218,7 +218,7 @@ const Subscription = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={handleCloseModal}
-                className="absolute z-50 top-4 right-4 text-gray-600 hover:text-[#043D12] text-xl bg-white/80 rounded-full p-2 shadow-sm"
+                className="absolute z-50 top-4 right-4 text-gray-600 hover:text-[#003087] text-xl bg-white/80 rounded-full p-2 shadow-sm"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -233,14 +233,14 @@ const Subscription = () => {
                   />
                 </svg>
               </motion.button>
-              <div className="p-6 md:p-8 bg-gradient-to-b from-[#FFFDF2] to-[#E8EFE5] text-center">
+              <div className="p-6 md:p-8 bg-gradient-to-b from-[#FEFEFF] to-[#E8EFE5] text-center">
                 <Player
                   autoplay
                   loop
                   src="https://lottie.host/7fd33a4f-2e59-4f34-ba0c-4af37814586e/Cq1qkcf16G.lottie"
                   style={{ height: "120px", width: "120px", margin: "0 auto" }}
                 />
-                <h2 className="text-2xl font-bold text-[#043D12] mt-4">
+                <h2 className="text-2xl font-bold text-[#003087] mt-4">
                   Unlock Your Business Potential
                 </h2>
                 <p className="text-sm text-gray-600 mt-3 max-w-md mx-auto">
@@ -275,7 +275,7 @@ const Subscription = () => {
                     disabled={subscribeLoading}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`flex-1 bg-[#043D12] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#02530c] transition-colors shadow-md ${
+                    className={`flex-1 bg-[#003087] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#002f87d5] transition-colors shadow-md ${
                       subscribeLoading ? "opacity-50 cursor-not-allowed" : ""
                     }`}
                   >
@@ -292,7 +292,7 @@ const Subscription = () => {
                     onClick={handleCloseModal}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex-1 bg-white text-[#043D12] px-6 py-3 rounded-full text-sm font-semibold border border-[#043D12] hover:bg-gray-100 transition-colors shadow-md"
+                    className="flex-1 bg-white text-[#003087] px-6 py-3 rounded-full text-sm font-semibold border border-[#043D12] hover:bg-gray-100 transition-colors shadow-md"
                   >
                     Maybe Later
                   </motion.button>

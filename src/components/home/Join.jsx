@@ -61,7 +61,7 @@ const Join = () => {
       whileInView="visible"
       viewport={{ once: false }}
       variants={animations.fadeIn}
-      className="w-full flex justify-center items-center bg-[#FAFEF4] lg:py-18 py-14 overflow-h-auto"
+      className="w-full flex justify-center items-center bg-[#FEFEFF] lg:py-18 py-14 overflow-h-auto"
     >
       <div className="container mx-auto px-[5vw] flex flex-col gap-10 text-center  overflow-hidden">
         {/* Title Section */}
@@ -127,9 +127,9 @@ const Join = () => {
               className="flex flex-col items-center justify-center text-center gap-6 overflow-hidden"
             >
               {card.animation}
-              <figcaption className="text-[24px] text-[#043D12]">
+              <figcaption className="text-[24px] text-[#003087]">
                 <h5 className="font-bold">{card.title}</h5>
-                <p className="text-[18px] lg:px-16 px-8 text-[#6A7368]">
+                <p className="text-[18px] lg:px-16 px-8 text-[#003087]">
                   {card.description}
                 </p>
               </figcaption>
@@ -141,7 +141,7 @@ const Join = () => {
 
         <Link
           to="/community/all-businesses"
-          className="w-fit mx-auto border bg-transparent text-[#043D12] border-[#043D12] rounded-[48px] shadow-lg lg:text-[18px] text-[16px] px-8 py-4 hover:bg-[#043D12] hover:text-white"
+          className="w-fit mx-auto border bg-transparent text-[#003087] border-[#043D12] rounded-[48px] shadow-lg lg:text-[18px] text-[16px] px-8 py-4 hover:bg-[#003087] hover:text-white"
         >
           Explore Businesses
         </Link>

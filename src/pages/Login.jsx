@@ -54,6 +54,7 @@ const Login = () => {
     setLoginAttempted(true);
 
     try {
+      
       // Clear previous auth state
       dispatch(logout());
       localStorage.removeItem("token");
@@ -142,9 +143,9 @@ const Login = () => {
     <div>
       <ToastContainer />
       <div className="w-full h-screen flex justify-center lg:grid grid-cols-2">
-        <div className="max-lg:hidden w-full h-full flex justify-center items-center bg-[url('/Group2.svg')] bg-cover bg-center bg-green-800">
+        <div className="max-lg:hidden w-full h-full flex justify-center items-center bg-[url('/Group2.svg')] bg-cover bg-center bg-[#003087]">
           <div className="w-full h-[90%] flex flex-col items-center">
-            <div className="container mx-auto px-[5vw] text-[#FFFDF2]">
+            <div className="container mx-auto px-[5vw] text-[#FEFEFF]">
               <Link to="/" className="lg:text-[35px] text-[32px] font-medium">
                 Welcome to <br /> MindPower Business Online
               </Link>
@@ -155,13 +156,13 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="relative max-lg:w-full flex flex-col items-center lg:justify-center bg-[#FFFDF2] max-md:bg-[url('/bg-login.svg')] bg-cover bg-center">
+        <div className="relative max-lg:w-full flex flex-col items-center lg:justify-center bg-[#FEFEFF] max-md:bg-[url('/bg-login.svg')] bg-cover bg-center">
           <div className="container mx-auto px-[5vw] h-fit max-lg:mt-16">
             <Link
               to="/"
               className="lg:text-[50px] text-[32px] font-bold text-[#363636] absolute top-4 left-4"
             >
-              <IoArrowBackCircle className="text-[#043D12] text-[40px]" />
+              <IoArrowBackCircle className="text-[#003087] text-[40px]" />
             </Link>
             <Link
               to="/"
@@ -169,7 +170,7 @@ const Login = () => {
             >
               MBO
             </Link>
-            <h4 className="lg:text-[32px] text-[20px] font-medium text-[#043D12] flex items-center gap-2">
+            <h4 className="lg:text-[32px] text-[20px] font-medium text-[#003087] flex items-center gap-2">
               Log In <Hand />
             </h4>
             <form
@@ -177,30 +178,30 @@ const Login = () => {
               className="max-lg:w-full flex flex-col gap-8 mt-8 max-lg:items-center"
             >
               <div className="max-lg:w-full email border-[1px] rounded-[27px] px-8 border-[#363636] flex items-center gap-2 lg:h-[64px] h-[51px]">
-                <FaRegEnvelope className="text-[#6A7368]" />
+                <FaRegEnvelope className="text-[#003087]" />
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email"
-                  className="bg-transparent w-full h-full border-none focus:outline-none focus:border-transparent text-[#043D12]"
+                  className="bg-transparent w-full h-full border-none focus:outline-none focus:border-transparent text-[#003087]"
                   required
                 />
               </div>
               <div className="max-lg:w-full password border-[1px] rounded-[27px] px-8 border-[#363636] flex items-center gap-2 lg:h-[64px] h-[51px]">
-                <CiLock className="text-[#6A7368]" />
+                <CiLock className="text-[#003087]" />
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Password"
-                  className="bg-transparent w-full h-full border-none focus:outline-none focus:border-transparent text-[#043D12]"
+                  className="bg-transparent w-full h-full border-none focus:outline-none focus:border-transparent text-[#003087]"
                   required
                 />
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
-                  className="text-[#6A7368] ml-4 focus:outline-none"
+                  className="text-[#003087] ml-4 focus:outline-none"
                 >
                   {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
                 </button>
@@ -215,24 +216,24 @@ const Login = () => {
                     className="custom-checkbox"
                     id="rememberMe"
                   />
-                  <label htmlFor="rememberMe" className="text-[#6A7368]">
+                  <label htmlFor="rememberMe" className="text-[#003087]">
                     Remember me
                   </label>
                 </div>
-                <Link to="/forgotten-password" className="text-[#6A7368]">
+                <Link to="/forgotten-password" className="text-[#003087]">
                   Forgot password?
                 </Link>
               </div>
               <button
                 type="submit"
                 disabled={isLoading}
-                className="mt-8 w-full text-[#FFFDF2] password bg-[#043D12] hover:bg-[#043D12]/75 shadow-lg rounded-[27px] px-8 flex justify-center items-center lg:h-[64px] h-[51px]"
+                className="mt-8 w-full text-[#FEFEFF] password bg-[#003087] hover:bg-[#003087]/75 shadow-lg rounded-[27px] px-8 flex justify-center items-center lg:h-[64px] h-[51px]"
               >
                 {isLoading ? "Logging in..." : "Log In"}
               </button>
               <Link
                 to="/create-account"
-                className="text-[#6A7368] text-[16px] text-center"
+                className="text-[#003087] text-[16px] text-center"
               >
                 Don't have an account?{" "}
                 <strong className="hover:text-[17px]">Register</strong>

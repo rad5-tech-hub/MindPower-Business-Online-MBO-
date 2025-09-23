@@ -33,7 +33,7 @@ const ContactDropdown = ({ socialLinks, onClose }) => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-fit border-[1px] border-[#6A7368] text-[#6A7368] rounded-[11px] text-[12px] md:text-[15px] px-2 md:px-4 py-2 shadow-lg hover:bg-[#043D12] hover:text-white text-center flex items-center gap-2"
+        className="w-fit border-[1px] border-[#6A7368] text-[#003087] rounded-[11px] text-[12px] md:text-[15px] px-2 md:px-4 py-2 shadow-lg hover:bg-[#003087] hover:text-white text-center flex items-center gap-2"
       >
         Contact Us
         <span>{isOpen ? "▲" : "▼"}</span>
@@ -60,9 +60,9 @@ const ContactDropdown = ({ socialLinks, onClose }) => {
                     setIsOpen(false);
                     onClose();
                   }}
-                  className="flex items-center gap-2 w-full text-left px-4 py-2 text-[15px] text-[#043D12] hover:bg-[#F5F7F5] transition-colors duration-300"
+                  className="flex items-center gap-2 w-full text-left px-4 py-2 text-[15px] text-[#003087] hover:bg-[#F5F7F5] transition-colors duration-300"
                 >
-                  <Icon className="text-[#043D12]" />
+                  <Icon className="text-[#003087]" />
                   {socialIcons[platform.toLowerCase()].label}
                 </a>
               ) : null;
@@ -103,7 +103,7 @@ const Modal = ({ profile, onClose }) => {
         >
           <button
             onClick={onClose}
-            className="absolute top-2 right-4 text-[#6A7368] hover:text-[#043D12] text-xl"
+            className="absolute top-2 right-4 text-[#003087] hover:text-[#003087] text-xl"
           >
             <FaTimes />
           </button>
@@ -126,7 +126,7 @@ const Modal = ({ profile, onClose }) => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl font-bold text-[#043D12]">
+            <h2 className="text-2xl font-bold text-[#003087]">
               {profile.businessName}
             </h2>
             <p className="text-sm text-gray-600">
@@ -143,7 +143,7 @@ const Modal = ({ profile, onClose }) => {
             <div className="flex gap-4 items-center mt-4">
               <button
                 onClick={handleViewProfile}
-                className="w-fit border-[1px] border-[#6A7368] text-[#6A7368] text-[12px] rounded-[11px] md:text-[15px] px-2 md:px-4 py-2 shadow-lg hover:bg-[#043D12] hover:text-white text-center"
+                className="w-fit border-[1px] border-[#6A7368] text-[#003087] text-[12px] rounded-[11px] md:text-[15px] px-2 md:px-4 py-2 shadow-lg hover:bg-[#003087] hover:text-white text-center"
               >
                 View Profile
               </button>
@@ -251,11 +251,11 @@ const NewBusinesses = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen bg-[#FFFDF2]">
+      <div className="flex justify-center items-center h-screen bg-[#FEFEFF]">
         <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-200"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-400"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-200"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-400"></div>
         </div>
       </div>
     );
@@ -276,13 +276,13 @@ const NewBusinesses = () => {
   };
 
   return (
-    <div className="w-full h-fit pb-8 flex justify-center bg-[#FFFDF2]">
+    <div className="w-full h-fit pb-8 flex justify-center bg-[#FEFEFF]">
       <div className="container mx-auto px-[5vw] h-fit flex flex-col gap-8">
         <div className="flex gap-4">
           <div className="relative w-1/2">
             <button
               onClick={toggleCategory}
-              className="w-full border-[1px] border-[#6A7368] text-[#6A7368] rounded-[11px] text-[15px] px-4 py-2 shadow-lg bg-transparent flex justify-between items-center hover:bg-[#F5F7F5] transition-all duration-300"
+              className="w-full border-[1px] border-[#6A7368] text-[#003087] rounded-[11px] text-[15px] px-4 py-2 shadow-lg bg-transparent flex justify-between items-center hover:bg-[#F5F7F5] transition-all duration-300"
             >
               {filterCategory || "Category"}
               <span className="ml-2">▼</span>
@@ -293,7 +293,7 @@ const NewBusinesses = () => {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="absolute w-full bg-[#FFFDF2] border-[1px] border-[#6A7368] rounded-[11px] shadow-lg mt-2 overflow-hidden"
+                  className="absolute w-full bg-[#FEFEFF] border-[1px] border-[#6A7368] rounded-[11px] shadow-lg mt-2 overflow-hidden"
                   style={{ zIndex: 40 }}
                 >
                   {getUniqueCategories().map((category) => (
@@ -305,7 +305,7 @@ const NewBusinesses = () => {
                         );
                         setIsCategoryOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-[15px] text-[#043D12] hover:bg-[#F5F7F5] transition-colors duration-300"
+                      className="w-full text-left px-4 py-2 text-[15px] text-[#003087] hover:bg-[#F5F7F5] transition-colors duration-300"
                     >
                       {category}
                     </button>
@@ -317,7 +317,7 @@ const NewBusinesses = () => {
           <div className="relative w-1/2">
             <button
               onClick={toggleLocation}
-              className="w-full border-[1px] border-[#6A7368] text-[#6A7368] rounded-[11px] text-[15px] px-4 py-2 shadow-lg bg-transparent flex justify-between items-center hover:bg-[#F5F7F5] transition-all duration-300"
+              className="w-full border-[1px] border-[#6A7368] text-[#003087] rounded-[11px] text-[15px] px-4 py-2 shadow-lg bg-transparent flex justify-between items-center hover:bg-[#F5F7F5] transition-all duration-300"
             >
               {filterLocation || "Location"}
               <span className="ml-2">▼</span>
@@ -328,7 +328,7 @@ const NewBusinesses = () => {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="absolute w-full bg-[#FFFDF2] border-[1px] border-[#6A7368] rounded-[11px] shadow-lg mt-2 overflow-hidden"
+                  className="absolute w-full bg-[#FEFEFF] border-[1px] border-[#6A7368] rounded-[11px] shadow-lg mt-2 overflow-hidden"
                   style={{ zIndex: 40 }}
                 >
                   {getUniqueLocations().map((location) => (
@@ -340,7 +340,7 @@ const NewBusinesses = () => {
                         );
                         setIsLocationOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-[15px] text-[#043D12] hover:bg-[#F5F7F5] transition-colors duration-300"
+                      className="w-full text-left px-4 py-2 text-[15px] text-[#003087] hover:bg-[#F5F7F5] transition-colors duration-300"
                     >
                       {location}
                     </button>
@@ -361,16 +361,16 @@ const NewBusinesses = () => {
               src="https://lottie.host/7fd33a4f-2e59-4f34-ba0c-4af37814586e/Cq1qkcf16G.lottie"
               style={{ height: "300px", width: "300px" }}
             />
-            <h2 className="text-md font-bold text-[#043D12]">
+            <h2 className="text-md font-bold text-[#003087]">
               No Results Found
             </h2>
-            <p className="text-sm text-[#6A7368] text-center max-w-2xl">
+            <p className="text-sm text-[#003087] text-center max-w-2xl">
               It looks like there are no businesses matching your filter
               criteria. Try adjusting your filters or explore other businesses
               in the community!
             </p>
             <button
-              className="mt-4 bg-[#043D12] text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-[#032d0e] transition-colors cursor-pointer"
+              className="mt-4 bg-[#003087] text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-[#003087] transition-colors cursor-pointer"
               onClick={() => {
                 setFilterCategory("");
                 setFilterLocation("");
@@ -382,7 +382,7 @@ const NewBusinesses = () => {
         ) : (
           <div className="all-business flex flex-col gap-24">
             <div>
-              <h1 className="text-[#043D12] lg:text-[32px] text-[24px] font-medium">
+              <h1 className="text-[#003087] lg:text-[32px] text-[24px] font-medium">
                 Newly Added Businesses
               </h1>
               <div className="w-full grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 max-[280px]:grid-cols-1 gap-4">
@@ -403,7 +403,7 @@ const NewBusinesses = () => {
                         className="w-8 h-8 rounded-full object-cover"
                         onError={(e) => (e.target.src = BusinessImg)}
                       />
-                      <p className="text-[12px] text-[#043D12]">
+                      <p className="text-[12px] text-[#003087]">
                         {profile.businessName}
                       </p>
                     </div>
@@ -418,7 +418,7 @@ const NewBusinesses = () => {
                         className="w-full h-[300px] object-cover rounded-lg"
                         onError={(e) => (e.target.src = BusinessImg)}
                       />
-                      <figcaption className="flex flex-col gap-2 text-[#043D12] py-2">
+                      <figcaption className="flex flex-col gap-2 text-[#003087] py-2">
                         <div className="flex flex-col gap-1">
                           <b className="lg:text-[15px] text-[10px]">
                             {profile.businessName}
@@ -435,7 +435,7 @@ const NewBusinesses = () => {
             </div>
 
             <div>
-              <h1 className="text-[#043D12] lg:text-[32px] text-[24px] font-medium">
+              <h1 className="text-[#003087] lg:text-[32px] text-[24px] font-medium">
                 Trending Businesses
               </h1>
               <div className="w-full grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 max-[280px]:grid-cols-1 gap-4">
@@ -456,7 +456,7 @@ const NewBusinesses = () => {
                         className="w-8 h-8 rounded-full object-cover"
                         onError={(e) => (e.target.src = BusinessImg)}
                       />
-                      <p className="text-[12px] text-[#043D12]">
+                      <p className="text-[12px] text-[#003087]">
                         {profile.businessName}
                       </p>
                     </div>
@@ -471,7 +471,7 @@ const NewBusinesses = () => {
                         className="w-full h-[300px] object-cover rounded-lg"
                         onError={(e) => (e.target.src = BusinessImg)}
                       />
-                      <figcaption className="flex flex-col gap-2 text-[#043D12] py-2">
+                      <figcaption className="flex flex-col gap-2 text-[#003087] py-2">
                         <div className="flex flex-col gap-1">
                           <b className="lg:text-[15px] text-[10px]">
                             {profile.businessName}

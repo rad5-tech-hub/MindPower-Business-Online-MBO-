@@ -9,6 +9,7 @@ import store from "./redux/store.js";
 import { SidebarProvider } from "./context/SidebarContext.jsx";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistor } from "./redux/store.js";
+import './styles/brand.css';
 
 createRoot(document.getElementById("root")).render(
   // <StrictMode>

@@ -19,7 +19,7 @@ const Home = () => {
   }, [location]);
 
   return (
-    <div className="w-full bg-[#FFFDF2]">
+    <div className="w-full bg-[#FEFEFF]">
       <HeroSection />
       <Join />
       {/* <UploadToCloudinary /> */}

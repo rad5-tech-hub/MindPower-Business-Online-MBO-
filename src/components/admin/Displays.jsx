@@ -412,9 +412,9 @@ const Display = () => {
     return (
       <div className="flex justify-center items-center h-screen bg-white">
         <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-200"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-400"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-200"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-400"></div>
         </div>
       </div>
     );
@@ -434,7 +434,7 @@ const Display = () => {
       />
 
       {/* Modern Marquee for Totals */}
-      <div className="relative overflow-hidden bg-[#043D12] text-[#FFFDF2] py-4 rounded-xl shadow-lg">
+      <div className="relative overflow-hidden bg-[#003087] text-[#FEFEFF] py-4 rounded-xl shadow-lg">
         <motion.div
           className="flex whitespace-nowrap lg:gap-20 gap-10"
           initial={{ x: "100%" }}
@@ -488,7 +488,7 @@ const Display = () => {
         <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#043D12] to-transparent pointer-events-none"></div>
       </div>
 
-      <div className="h-[12vh] p-4 sm:p-8 text-[#6A7368] flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div className="h-[12vh] p-4 sm:p-8 text-[#003087] flex flex-col sm:flex-row justify-between items-center gap-2">
         <div className="welcome flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
           <h2 className="text-base sm:text-xl md:text-2xl">
             Welcome back, {profileData.firstname || "Admin"}
@@ -496,7 +496,7 @@ const Display = () => {
         </div>
         <div className="flex items-center gap-2 sm:gap-4">
           <Link to="/admin/manage-notifications">
-            <IoIosNotificationsOutline className="text-2xl sm:text-3xl text-[#6A7368] hover:text-[#043D12] transition-colors" />
+            <IoIosNotificationsOutline className="text-2xl sm:text-3xl text-[#003087] hover:text-[#003087] transition-colors" />
           </Link>
           <div className="relative">
             <motion.figure
@@ -506,8 +506,8 @@ const Display = () => {
               transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
               onClick={toggleProfileDropdown}
             >
-              <CiUser className="text-2xl text-[#043D12] bg-gray-100 rounded-full p-1" />
-              <figcaption className="ml-2 text-[#6A7368] hidden sm:block">
+              <CiUser className="text-2xl text-[#003087] bg-gray-100 rounded-full p-1" />
+              <figcaption className="ml-2 text-[#003087] hidden sm:block">
                 <h3 className="text-xs sm:text-sm font-semibold">
                   {profileData.firstname} {profileData.lastname}
                 </h3>
@@ -519,7 +519,7 @@ const Display = () => {
                 className="absolute right-0 mt-2 w-40 sm:w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50"
               >
                 <button
-                  className="w-full text-left px-3 py-2 text-sm text-[#6A7368] flex items-center gap-2 hover:bg-gray-100"
+                  className="w-full text-left px-3 py-2 text-sm text-[#003087] flex items-center gap-2 hover:bg-gray-100"
                   onClick={handleChangePassword}
                 >
                   <FiLock /> Change Password
@@ -540,8 +540,8 @@ const Display = () => {
             <div
               key={key}
               onClick={() => handleMetricChange(key)}
-              className={`p-4 text-sm text-[#6A7368] hover:text-white hover:bg-[#043D12] rounded-xl flex flex-col gap-2 text-center cursor-pointer ${
-                metric === key ? "bg-[#043D12] text-[#FFFDF2]" : "bg-gray-200"
+              className={`p-4 text-sm text-[#003087] hover:text-white hover:bg-[#003087] rounded-xl flex flex-col gap-2 text-center cursor-pointer ${
+                metric === key ? "bg-[#003087] text-[#FEFEFF]" : "bg-gray-200"
               }`}
             >
               <h5 className="text-center text-xs sm:text-sm">{title}</h5>
@@ -555,7 +555,7 @@ const Display = () => {
 
         <div className="mt-6 sm:mt-8 border-[1px] border-[#6A7368] rounded-3xl shadow-lg p-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-            <h3 className="text-sm sm:text-base text-[#6A7368]">
+            <h3 className="text-sm sm:text-base text-[#003087]">
               {METRICS.find((m) => m.key === metric)?.title}
             </h3>
             <div className="relative border-[1px] rounded-lg dropdown-container w-full sm:w-auto">
@@ -563,7 +563,7 @@ const Display = () => {
                 className="flex items-center gap-2 sm:gap-4 cursor-pointer rounded-lg px-2 py-1"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
-                <span className="text-xs sm:text-sm text-[#6A7368]">
+                <span className="text-xs sm:text-sm text-[#003087]">
                   {TIME_RANGES[timeRange].label}
                 </span>
                 <RiArrowDropDownLine className="text-lg sm:text-xl" />
@@ -639,11 +639,11 @@ const Display = () => {
             className="bg-white rounded-xl shadow-lg w-full max-w-md sm:max-w-lg max-h-[90vh] overflow-y-auto p-4 sm:p-6"
           >
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg sm:text-xl font-semibold text-[#6A7368]">
+              <h2 className="text-lg sm:text-xl font-semibold text-[#003087]">
                 Change Password
               </h2>
               <AiOutlineClose
-                className="text-lg sm:text-xl text-[#6A7368] cursor-pointer hover:text-[#043D12] transition-colors"
+                className="text-lg sm:text-xl text-[#003087] cursor-pointer hover:text-[#003087] transition-colors"
                 onClick={() => {
                   setIsChangePasswordModalOpen(false);
                   setChangePasswordFormData({
@@ -657,7 +657,7 @@ const Display = () => {
             </div>
             <form onSubmit={handleChangePasswordSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs sm:text-sm text-[#6A7368] mb-1">
+                <label className="block text-xs sm:text-sm text-[#003087] mb-1">
                   Current Password
                 </label>
                 <div className="relative">
@@ -671,7 +671,7 @@ const Display = () => {
                     required
                   />
                   <span
-                    className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#6A7368]"
+                    className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#003087]"
                     onClick={() => setShowOldPassword(!showOldPassword)}
                   >
                     {showOldPassword ? <FiEyeOff /> : <FiEye />}
@@ -679,7 +679,7 @@ const Display = () => {
                 </div>
               </div>
               <div>
-                <label className="block text-xs sm:text-sm text-[#6A7368] mb-1">
+                <label className="block text-xs sm:text-sm text-[#003087] mb-1">
                   New Password
                 </label>
                 <div className="relative">
@@ -693,7 +693,7 @@ const Display = () => {
                     required
                   />
                   <span
-                    className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#6A7368]"
+                    className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#003087]"
                     onClick={() => setShowNewPassword(!showNewPassword)}
                   >
                     {showNewPassword ? <FiEyeOff /> : <FiEye />}
@@ -701,7 +701,7 @@ const Display = () => {
                 </div>
               </div>
               <div>
-                <label className="block text-xs sm:text-sm text-[#6A7368] mb-1">
+                <label className="block text-xs sm:text-sm text-[#003087] mb-1">
                   Confirm New Password
                 </label>
                 <div className="relative">
@@ -715,7 +715,7 @@ const Display = () => {
                     required
                   />
                   <span
-                    className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#6A7368]"
+                    className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#003087]"
                     onClick={() =>
                       setShowConfirmNewPassword(!showConfirmNewPassword)
                     }
@@ -744,7 +744,7 @@ const Display = () => {
               )}
               <button
                 type="submit"
-                className="w-full mt-4 px-4 py-2 bg-[#043D12] text-[#FFFDF2] rounded-xl hover:bg-[#032d0e] transition-colors text-sm sm:text-base flex items-center justify-center"
+                className="w-full mt-4 px-4 py-2 bg-[#003087] text-[#FEFEFF] rounded-xl hover:bg-[#003087] transition-colors text-sm sm:text-base flex items-center justify-center"
                 disabled={
                   passwordValidation !== "Password is valid" || isSubmitting
                 }

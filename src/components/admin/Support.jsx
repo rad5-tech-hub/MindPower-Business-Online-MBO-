@@ -269,7 +269,7 @@ const NoDataDisplay = () => (
           />
         </svg>
       </div>
-      <div className="absolute -bottom-2 -right-2 bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center animate-pulse">
+      <div className="absolute -bottom-2 -right-2 bg-[#003087] text-white rounded-full w-8 h-8 flex items-center justify-center animate-pulse">
         <span className="text-sm">0</span>
       </div>
     </div>
@@ -508,7 +508,7 @@ const AllTickets = ({ tickets, setTickets }) => {
                       {(ticket.status === "Pending" ||
                         ticket.status === "In Progress") && (
                         <button
-                          className="bg-green-500 text-white px-2 py-1 rounded text-xs hover:bg-green-600"
+                          className="bg-[#003087] text-white px-2 py-1 rounded text-xs hover:bg-[#003087]"
                           onClick={() => handleMarkAsResolved(ticket.id)}
                         >
                           Resolve
@@ -564,7 +564,7 @@ const AllTickets = ({ tickets, setTickets }) => {
                 onClick={() => paginate(i + 1)}
                 className={`px-3 py-1 text-xs sm:text-sm ${
                   currentPage === i + 1
-                    ? "bg-green-500 text-white"
+                    ? "bg-[#003087] text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
@@ -890,7 +890,7 @@ const PendingTickets = ({ tickets, setTickets }) => {
                 onClick={() => paginate(i + 1)}
                 className={`px-3 py-1 text-xs sm:text-sm ${
                   currentPage === i + 1
-                    ? "bg-green-500 text-white"
+                    ? "bg-[#003087] text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
@@ -1162,7 +1162,7 @@ const ResolvedTickets = ({ tickets }) => {
                 onClick={() => paginate(i + 1)}
                 className={`px-3 py-1 text-xs sm:text-sm ${
                   currentPage === i + 1
-                    ? "bg-green-500 text-white"
+                    ? "bg-[#003087] text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
@@ -1433,7 +1433,7 @@ const AssignedTickets = ({ tickets, setTickets }) => {
                         View
                       </button>
                       <button
-                        className="bg-green-500 text-white px-2 py-1 rounded text-xs hover:bg-green-600"
+                        className="bg-[#003087] text-white px-2 py-1 rounded text-xs hover:bg-[#003087]"
                         onClick={() => handleMarkAsResolved(ticket.id)}
                       >
                         Resolve
@@ -1485,7 +1485,7 @@ const AssignedTickets = ({ tickets, setTickets }) => {
                 onClick={() => paginate(i + 1)}
                 className={`px-3 py-1 text-xs sm:text-sm ${
                   currentPage === i + 1
-                    ? "bg-green-500 text-white"
+                    ? "bg-[#003087] text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
@@ -1702,7 +1702,7 @@ const FAQs = () => {
           FAQs & Knowledge Base
         </h2>
         <button
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm w-full sm:w-auto"
+          className="bg-[#003087] text-white px-4 py-2 rounded hover:bg-[#003087] text-sm w-full sm:w-auto"
           onClick={() => setIsAddModalOpen(true)}
         >
           + Add Question
@@ -1792,7 +1792,7 @@ const FAQs = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 disabled:opacity-50 text-sm"
+                className="w-full bg-[#003087] text-white px-4 py-2 rounded hover:bg-[#003087] disabled:opacity-50 text-sm"
                 disabled={isAdding}
               >
                 {isAdding ? "Adding..." : "Add Question"}
@@ -1849,7 +1849,7 @@ const FAQs = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm"
+                className="w-full bg-[#003087] text-white px-4 py-2 rounded hover:bg-[#003087] text-sm"
               >
                 Update Question
               </button>

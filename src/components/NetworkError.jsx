@@ -50,7 +50,7 @@ const NetworkError = ({ message, onRetry }) => {
           {onRetry && (
             <button
               onClick={onRetry}
-              className="flex items-center gap-2 px-4 py-2 bg-[#043D12] text-white rounded-lg hover:bg-[#02530c] transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-[#003087] text-white rounded-lg hover:bg-[#002f87d5] transition-colors duration-200"
             >
               <FaRedo />
               Retry
@@ -58,7 +58,7 @@ const NetworkError = ({ message, onRetry }) => {
           )}
           <button
             onClick={() => navigate("/")}
-            className="flex items-center gap-2 px-4 py-2 border border-[#6A7368] text-[#6A7368] rounded-lg hover:bg-[#F5F7F5] transition-colors duration-200"
+            className="flex items-center gap-2 px-4 py-2 border border-[#6A7368] text-[#003087] rounded-lg hover:bg-[#F5F7F5] transition-colors duration-200"
           >
             <FaHome />
             Go Home

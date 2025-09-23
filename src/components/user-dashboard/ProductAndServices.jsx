@@ -257,22 +257,22 @@ const ProductAndServices = () => {
   // Loader component
   const Loader = () => (
     <div className="flex space-x-2 items-center">
-      <div className="w-3 h-3 bg-[#043D12] rounded-full animate-pulse"></div>
-      <div className="w-3 h-3 bg-[#043D12] rounded-full animate-pulse delay-200"></div>
-      <div className="w-3 h-3 bg-[#043D12] rounded-full animate-pulse delay-400"></div>
+      <div className="w-3 h-3 bg-[#003087] rounded-full animate-pulse"></div>
+      <div className="w-3 h-3 bg-[#003087] rounded-full animate-pulse delay-200"></div>
+      <div className="w-3 h-3 bg-[#003087] rounded-full animate-pulse delay-400"></div>
     </div>
   );
 
   if (loadingProfile) {
     return (
-      <div className="flex justify-center items-center h-screen bg-gradient-to-br from-[#FAFEF4] to-white">
+      <div className="flex justify-center items-center h-screen bg-gradient-to-br from-[#FEFEFF] to-white">
         <Loader />
       </div>
     );
   }
 
   return (
-    <div className="w-full pb-8 flex flex-col gap-10 text-[#6A7368] bg-gradient-to-br from-[#FAFEF4] to-white min-h-screen">
+    <div className="w-full pb-8 flex flex-col gap-10 text-[#003087] bg-gradient-to-br from-[#FEFEFF] to-white min-h-screen">
       <EditHeader />
       <ToastContainer
         position="top-right"
@@ -289,11 +289,11 @@ const ProductAndServices = () => {
 
       <div className="container px-[5vw] mx-auto">
         <div className="product-header flex max-md:flex-col max-md:gap-4 items-center justify-between mb-8">
-          <p className="text-[18px] text-[#043D12] font-semibold border-b-2 border-[#043D12] px-3 py-1 transition-all">
+          <p className="text-[18px] text-[#003087] font-semibold border-b-2 border-[#043D12] px-3 py-1 transition-all">
             Product & Services
           </p>
           <button
-            className={`text-[14px] border-[1px] rounded-full shadow px-5 py-2.5 flex items-center gap-2 border-[#043D12] bg-[#043D12] text-white hover:bg-[#03280E] transition-all duration-300 cursor-pointer ${
+            className={`text-[14px] border-[1px] rounded-full shadow px-5 py-2.5 flex items-center gap-2 border-[#043D12] bg-[#003087] text-white hover:bg-[#03280E] transition-all duration-300 cursor-pointer ${
               uploading ? "cursor-not-allowed opacity-60" : ""
             }`}
             onClick={() => {
@@ -331,12 +331,12 @@ const ProductAndServices = () => {
                 </div>
                 <figcaption className="flex flex-col px-4 py-3 bg-white">
                   <div className="flex items-center justify-between mb-2">
-                    <h5 className="text-[14px] font-medium text-[#043D12]">
+                    <h5 className="text-[14px] font-medium text-[#003087]">
                       {product.name}
                     </h5>
                     <div className="flex items-center gap-3 text-[20px]">
                       <FiEdit3
-                        className="cursor-pointer text-[#6A7368] hover:text-[#043D12] transition-colors"
+                        className="cursor-pointer text-[#003087] hover:text-[#003087] transition-colors"
                         onClick={() => handleEdit(product.id)}
                       />
                       <RiDeleteBinLine
@@ -345,7 +345,7 @@ const ProductAndServices = () => {
                       />
                     </div>
                   </div>
-                  <p className="text-[12px] text-[#6A7368] line-clamp-2">
+                  <p className="text-[12px] text-[#003087] line-clamp-2">
                     {product.description || "No description provided"}
                   </p>
                 </figcaption>
@@ -361,15 +361,15 @@ const ProductAndServices = () => {
                 className="w-full h-full object-contain opacity-80"
               />
             </div>
-            <h3 className="text-2xl font-semibold text-[#043D12] mb-3">
+            <h3 className="text-2xl font-semibold text-[#003087] mb-3">
               No Products Yet
             </h3>
-            <p className="text-center text-[#6A7368] mb-6 max-w-md">
+            <p className="text-center text-[#003087] mb-6 max-w-md">
               Showcase your amazing products and services. Upload your first
               product to kick things off!
             </p>
             <button
-              className="text-[14px] border-[1px] rounded-full shadow px-6 py-3 flex items-center gap-2 border-[#043D12] bg-[#043D12] text-white hover:bg-[#03280E] transition-all duration-300"
+              className="text-[14px] border-[1px] rounded-full shadow px-6 py-3 flex items-center gap-2 border-[#043D12] bg-[#003087] text-white hover:bg-[#03280E] transition-all duration-300"
               onClick={() => {
                 if (!uploading) {
                   const fileInput = document.createElement("input");
@@ -396,7 +396,7 @@ const ProductAndServices = () => {
         {editingProduct && (
           <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 animate-fade-in">
             <div className="bg-white p-8 rounded-2xl w-[28rem] max-w-[90%] shadow-2xl transform transition-all duration-300 scale-100 hover:scale-105">
-              <h2 className="text-2xl font-semibold text-[#043D12] mb-6">
+              <h2 className="text-2xl font-semibold text-[#003087] mb-6">
                 {isNewUpload ? "Name & Describe Your Product" : "Edit Product"}
               </h2>
               {/* Product Image Preview */}
@@ -431,7 +431,7 @@ const ProductAndServices = () => {
                 {/* Only show Cancel button during edit mode, not during new upload */}
                 {!isNewUpload && (
                   <button
-                    className="px-6 py-2.5 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200 text-[#6A7368] font-medium cursor-pointer"
+                    className="px-6 py-2.5 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200 text-[#003087] font-medium cursor-pointer"
                     onClick={() => {
                       setEditingProduct(null);
                       setNewName("");
@@ -445,7 +445,7 @@ const ProductAndServices = () => {
                 <button
                   className={`px-6 py-2.5 rounded-lg font-medium transition-colors duration-200 cursor-pointer ${
                     newName.trim() && newDescription.trim()
-                      ? "bg-[#043D12] text-white hover:bg-[#03280E]"
+                      ? "bg-[#003087] text-white hover:bg-[#03280E]"
                       : "bg-gray-300 text-gray-500 cursor-not-allowed"
                   }`}
                   onClick={handleSaveEdit}
@@ -462,10 +462,10 @@ const ProductAndServices = () => {
         {deleteConfirmProduct && (
           <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 animate-fade-in">
             <div className="bg-white p-6 rounded-2xl w-96 max-w-[90%] shadow-2xl transform transition-all duration-300 scale-100 hover:scale-105">
-              <h2 className="text-xl font-semibold text-[#043D12] mb-4">
+              <h2 className="text-xl font-semibold text-[#003087] mb-4">
                 Confirm Deletion
               </h2>
-              <p className="text-[#6A7368] mb-4">
+              <p className="text-[#003087] mb-4">
                 Are you sure you want to delete "{deleteConfirmProduct.name}"?
                 This action cannot be undone.
               </p>
@@ -491,24 +491,24 @@ const ProductAndServices = () => {
         {showSubscriptionModal && (
           <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 animate-fade-in">
             <div className="bg-white p-8 rounded-2xl w-[32rem] max-w-[90%] shadow-2xl transform transition-all duration-300 scale-100 hover:scale-105">
-              <h2 className="text-2xl font-semibold text-[#043D12] mb-4">
+              <h2 className="text-2xl font-semibold text-[#003087] mb-4">
                 Heads up!{" "}
               </h2>
-              <p className="text-[#6A7368] mb-6">
+              <p className="text-[#003087] mb-6">
                 Products stay hidden until you subscribe.
                 <br />
                 Want buyers to find you? Unlock your profile
               </p>
               <div className="flex justify-end gap-3">
                 <button
-                  className="px-6 py-2.5 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200 text-[#6A7368] font-medium cursor-pointer"
+                  className="px-6 py-2.5 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200 text-[#003087] font-medium cursor-pointer"
                   onClick={() => setShowSubscriptionModal(false)}
                 >
                   Close
                 </button>
                 <a
                   href="/subscribe" // Adjust the URL to match your subscription page route
-                  className="px-6 py-2.5 bg-[#043D12] text-white rounded-lg hover:bg-[#03280E] transition-colors duration-200 font-medium cursor-pointer"
+                  className="px-6 py-2.5 bg-[#003087] text-white rounded-lg hover:bg-[#03280E] transition-colors duration-200 font-medium cursor-pointer"
                 >
                   Subscribe Now
                 </a>

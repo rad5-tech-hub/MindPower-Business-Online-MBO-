@@ -35,7 +35,7 @@ const formatPrice = (price) => {
 };
 
 const PUBLIC_KEY = import.meta.env.VITE_FLUTTERWAVE_PUBLIC_KEY;
-const MAIN_URL = import.meta.env.VITE_BASE_URL_MAIN;
+const MAIN_URL = import.meta.env.VITE_BASE_URL;
 const SUBACCOUNT_ID = "RS_3B38D8439E07F7FACC77DEDC01FACE59";
 
 const IntroModal = ({
@@ -67,7 +67,7 @@ const IntroModal = ({
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50 px-4">
       <motion.div
-        className="bg-[#FFFDF2] rounded-[20px] p-6 sm:p-8 w-full max-w-[90vw] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] max-h-[90vh] overflow-y-auto text-center shadow-xl border border-[#E8F5E9]"
+        className="bg-[#FEFEFF] rounded-[20px] p-6 sm:p-8 w-full max-w-[90vw] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] max-h-[90vh] overflow-y-auto text-center shadow-xl border border-[#E8F5E9]"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
@@ -88,21 +88,21 @@ const IntroModal = ({
 
         {isFirstVisit ? (
           <>
-            <h2 className="text-[20px] sm:text-[24px] md:text-[28px] font-serif font-bold text-[#043D12] mb-2 tracking-tight text-center">
+            <h2 className="text-[20px] sm:text-[24px] md:text-[28px] font-serif font-bold text-[#003087] mb-2 tracking-tight text-center">
               MindPower Business Online
             </h2>
-            <p className="text-[#043D12] text-[13px] sm:text-[15px] font-medium mb-3 sm:mb-4 italic text-center">
+            <p className="text-[#003087] text-[13px] sm:text-[15px] font-medium mb-3 sm:mb-4 italic text-center">
               {hasMultiple
                 ? "Choose the right plan for your business"
                 : "Elevate your business with MBO"}
             </p>
-            <p className="text-[#6A7368] text-[12px] sm:text-[14px] mb-4 sm:mb-6 leading-relaxed text-center">
+            <p className="text-[#003087] text-[12px] sm:text-[14px] mb-4 sm:mb-6 leading-relaxed text-center">
               {hasMultiple
                 ? "Select from our subscription plans to unlock visibility, networking, and growth opportunities."
                 : "Join the MindPower Business Network with an annual subscription to unlock all benefits."}
             </p>
             <div className="mb-6">
-              <h3 className="text-[#043D12] text-[14px] sm:text-[16px] font-semibold tracking-wide mb-3 text-center">
+              <h3 className="text-[#003087] text-[14px] sm:text-[16px] font-semibold tracking-wide mb-3 text-center">
                 {hasMultiple ? "Available Plans:" : "Subscription Plan:"}
               </h3>
               <div
@@ -121,50 +121,50 @@ const IntroModal = ({
                     >
                       <div className="flex justify-center items-center">
                         <div className="text-center">
-                          <h4 className="text-[#043D12] font-bold text-[16px] sm:text-[18px]">
+                          <h4 className="text-[#003087] font-bold text-[16px] sm:text-[18px]">
                             {subscription.name || "Business Plan"}
                           </h4>
                           <div className="flex items-center mt-1">
-                            <span className="text-[#043D12] font-bold text-[20px] sm:text-[24px] ml-1">
+                            <span className="text-[#003087] font-bold text-[20px] sm:text-[24px] ml-1">
                               {formatPrice(subscription.price)}
                             </span>
-                            <span className="text-[#6A7368] text-[12px] ml-2">
+                            <span className="text-[#003087] text-[12px] ml-2">
                               /year
                             </span>
                           </div>
                         </div>
                         {hasMultiple && (
-                          <div className="bg-[#043D12]/10 text-[#043D12] text-[10px] sm:text-[12px] px-2 py-1 rounded-full text-center">
+                          <div className="bg-[#003087]/10 text-[#003087] text-[10px] sm:text-[12px] px-2 py-1 rounded-full text-center">
                             {subscription.duration || "12 months"}
                           </div>
                         )}
                       </div>
                       {subscription.description && (
-                        <p className="text-[#6A7368] text-[12px] sm:text-[13px] mt-2 text-center">
+                        <p className="text-[#003087] text-[12px] sm:text-[13px] mt-2 text-center">
                           {subscription.description}
                         </p>
                       )}
                     </motion.div>
                   ))
                 ) : (
-                  <p className="text-[#6A7368] text-[12px] sm:text-[14px] py-PAD text-center">
+                  <p className="text-[#003087] text-[12px] sm:text-[14px] py-PAD text-center">
                     No plans available at the moment. Please try again later.
                   </p>
                 )}
               </div>
             </div>
             <div className="space-y-3 sm:space-y-4 mb-6 flex flex-col items-center">
-              <h3 className="text-[#043D12] text-[14px] sm:text-[16px] font-semibold tracking-wide text-center">
+              <h3 className="text-[#003087] text-[14px] sm:text-[16px] font-semibold tracking-wide text-center">
                 All Plans Include:
               </h3>
               <div className="flex flex-col items-center gap-2 max-w-[500px] w-full">
                 <div className="flex items-start gap-2 w-full justify-center">
-                  <CheckCircleIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#043D12] mt-0.5 flex-shrink-0" />
+                  <CheckCircleIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#003087] mt-0.5 flex-shrink-0" />
                   <div className="text-left">
-                    <p className="text-[#6A7368] text-[12px] sm:text-[14px]">
+                    <p className="text-[#003087] text-[12px] sm:text-[14px]">
                       <strong>Business Profile</strong>
                     </p>
-                    <ul className="text-[#6A7368] text-[11px] sm:text-[13px] list-disc ml-4">
+                    <ul className="text-[#003087] text-[11px] sm:text-[13px] list-disc ml-4">
                       <li>Maintain an active business presence</li>
                       <li>Be discoverable within our network</li>
                       <li>Collaborate with fellow entrepreneurs</li>
@@ -172,12 +172,12 @@ const IntroModal = ({
                   </div>
                 </div>
                 <div className="flex items-start gap-2 w-full justify-center">
-                  <RocketLaunchIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#043D12] mt-0.5 flex-shrink-0" />
+                  <RocketLaunchIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#003087] mt-0.5 flex-shrink-0" />
                   <div className="text-left">
-                    <p className="text-[#6A7368] text-[12px] sm:text-[14px]">
+                    <p className="text-[#003087] text-[12px] sm:text-[14px]">
                       <strong>Promotion & Visibility</strong>
                     </p>
-                    <ul className="text-[#6A7368] text-[11px] sm:text-[13px] list-disc ml-4">
+                    <ul className="text-[#003087] text-[11px] sm:text-[13px] list-disc ml-4">
                       <li>Amplify your business reach</li>
                       <li>Feature in premium listings</li>
                       <li>Attract more customers</li>
@@ -189,38 +189,38 @@ const IntroModal = ({
           </>
         ) : subscriptionStatus !== "active" ? (
           <>
-            <h2 className="text-[20px] sm:text-[24px] md:text-[28px] font-serif font-bold text-[#043D12] mb-2 tracking-tight text-center">
+            <h2 className="text-[20px] sm:text-[24px] md:text-[28px] font-serif font-bold text-[#003087] mb-2 tracking-tight text-center">
               Boost Your Business on MBO!
             </h2>
-            <p className="text-[#043D12] text-[13px] sm:text-[15px] font-medium mb-3 sm:mb-4 italic text-center">
+            <p className="text-[#003087] text-[13px] sm:text-[15px] font-medium mb-3 sm:mb-4 italic text-center">
               Your business is live on MBO — customers can now find you!
             </p>
-            <p className="text-[#6A7368] text-[12px] sm:text-[14px] mb-2 leading-relaxed text-center">
+            <p className="text-[#003087] text-[12px] sm:text-[14px] mb-2 leading-relaxed text-center">
               Want more visibility, more trust, and more sales?
             </p>
-            <p className="text-[#6A7368] text-[12px] sm:text-[14px] mb-4 sm:mb-6 leading-relaxed text-center">
+            <p className="text-[#003087] text-[12px] sm:text-[14px] mb-4 sm:mb-6 leading-relaxed text-center">
               Upgrade your profile for just <strong>{dynamicPrice}/year</strong>{" "}
               and enjoy:
             </p>
-            <ul className="text-[#6A7368] text-[12px] sm:text-[14px] mb-4 sm:mb-6 text-left max-w-[400px] mx-auto space-y-3">
+            <ul className="text-[#003087] text-[12px] sm:text-[14px] mb-4 sm:mb-6 text-left max-w-[400px] mx-auto space-y-3">
               <li className="flex items-center gap-2">
-                <StarIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#043D12] flex-shrink-0" />
+                <StarIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#003087] flex-shrink-0" />
                 <span>Full product exposure to reach more customers</span>
               </li>
               <li className="flex items-center gap-2">
-                <RocketLaunchIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#043D12] flex-shrink-0" />
+                <RocketLaunchIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#003087] flex-shrink-0" />
                 <span>Priority listing on product page</span>
               </li>
               <li className="flex items-center gap-2">
-                <RocketLaunchIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#043D12] flex-shrink-0" />
+                <RocketLaunchIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#003087] flex-shrink-0" />
                 <span>Verified badge to build instant trust</span>
               </li>
               <li className="flex items-center gap-2">
-                <ChatBubbleLeftRightIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#043D12] flex-shrink-0" />
+                <ChatBubbleLeftRightIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#003087] flex-shrink-0" />
                 <span>Direct WhatsApp contact for buyers</span>
               </li>
             </ul>
-            <p className="text-[#6A7368] text-[12px] sm:text-[14px] mb-4 sm:mb-6 leading-relaxed text-center">
+            <p className="text-[#003087] text-[12px] sm:text-[14px] mb-4 sm:mb-6 leading-relaxed text-center">
               Take your business to the next level — upgrade now!
             </p>
           </>
@@ -230,7 +230,7 @@ const IntroModal = ({
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-4 sm:mt-6">
             <motion.button
               onClick={onClose}
-              className="bg-transparent border-2 border-[#043D12] text-[#043D12] rounded-[48px] px-5 sm:px-6 py-2 sm:py-2.5 font-medium text-[13px] sm:text-[14px] hover:bg-[#043D12]/10 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+              className="bg-transparent border-2 border-[#043D12] text-[#003087] rounded-[48px] px-5 sm:px-6 py-2 sm:py-2.5 font-medium text-[13px] sm:text-[14px] hover:bg-[#003087]/10 transition-all duration-300 w-full sm:w-auto cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -238,7 +238,7 @@ const IntroModal = ({
             </motion.button>
             <motion.button
               onClick={onProceed}
-              className="bg-[#043D12] text-[#FFFDF2] rounded-[48px] px-5 sm:px-6 py-2 sm:py-2.5 font-medium text-[13px] sm:text-[14px] shadow-md hover:bg-[#032d0e] transition-all duration-300 w-full sm:w-auto cursor-pointer"
+              className="bg-[#003087] text-[#FEFEFF] rounded-[48px] px-5 sm:px-6 py-2 sm:py-2.5 font-medium text-[13px] sm:text-[14px] shadow-md hover:bg-[#003087] transition-all duration-300 w-full sm:w-auto cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -251,7 +251,7 @@ const IntroModal = ({
           </div>
         )}
 
-        <p className="text-[#6A7368] text-[10px] sm:text-[12px] mt-4 sm:mt-6 italic text-center">
+        <p className="text-[#003087] text-[10px] sm:text-[12px] mt-4 sm:mt-6 italic text-center">
           {isFirstVisit
             ? "Grow your network and elevate your business with MBO."
             : "Join thousands of businesses thriving on MBO."}
@@ -267,7 +267,7 @@ const SuccessModal = ({ onCloseAndNavigate, userName }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50 px-4">
       <motion.div
-        className="bg-[#FFFDF2] rounded-[20px] p-6 sm:p-8 w-full max-w-[90vw] sm:max-w-[600px] md:max-w-[700px] max-h-[90vh] overflow-y-auto text-center shadow-xl border border-[#E8F5E9]"
+        className="bg-[#FEFEFF] rounded-[20px] p-6 sm:p-8 w-full max-w-[90vw] sm:max-w-[600px] md:max-w-[700px] max-h-[90vh] overflow-y-auto text-center shadow-xl border border-[#E8F5E9]"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
@@ -279,40 +279,40 @@ const SuccessModal = ({ onCloseAndNavigate, userName }) => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
         >
-          <div className="w-20 h-20 bg-[#043D12]/10 rounded-full flex items-center justify-center">
-            <CheckCircleIcon className="w-12 h-12 text-[#043D12]" />
+          <div className="w-20 h-20 bg-[#003087]/10 rounded-full flex items-center justify-center">
+            <CheckCircleIcon className="w-12 h-12 text-[#003087]" />
           </div>
         </motion.div>
 
-        <h2 className="text-[20px] sm:text-[24px] md:text-[28px] font-serif font-bold text-[#043D12] mb-2 tracking-tight text-center">
+        <h2 className="text-[20px] sm:text-[24px] md:text-[28px] font-serif font-bold text-[#003087] mb-2 tracking-tight text-center">
           Welcome Aboard, {userName}!
         </h2>
 
-        <p className="text-[#043D12] text-[13px] sm:text-[15px] font-medium mb-3 sm:mb-4 italic text-center">
+        <p className="text-[#003087] text-[13px] sm:text-[15px] font-medium mb-3 sm:mb-4 italic text-center">
           Your MBO subscription is live!
         </p>
 
-        <p className="text-[#6A7368] text-[12px] sm:text-[14px] mb-4 sm:mb-6 leading-relaxed text-center">
+        <p className="text-[#003087] text-[12px] sm:text-[14px] mb-4 sm:mb-6 leading-relaxed text-center">
           You’re now part of the MindPower Business Network. Complete your
           profile to maximize your impact:
         </p>
 
         <div className="text-left space-y-3 sm:space-y-4 mb-6 max-w-[400px] mx-auto">
           <div className="flex items-start gap-2">
-            <UserCircleIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#043D12] mt-0.5 flex-shrink-0" />
-            <p className="text-[#6A7368] text-[12px] sm:text-[14px]">
+            <UserCircleIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#003087] mt-0.5 flex-shrink-0" />
+            <p className="text-[#003087] text-[12px] sm:text-[14px]">
               <strong>Build your profile</strong> to showcase your brand
             </p>
           </div>
           <div className="flex items-start gap-2">
-            <MagnifyingGlassIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#043D12] mt-0.5 flex-shrink-0" />
-            <p className="text-[#6A7368] text-[12px] sm:text-[14px]">
+            <MagnifyingGlassIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#003087] mt-0.5 flex-shrink-0" />
+            <p className="text-[#003087] text-[12px] sm:text-[14px]">
               <strong>Get discovered</strong> by customers and partners
             </p>
           </div>
           <div className="flex items-start gap-2">
-            <UsersIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#043D12] mt-0.5 flex-shrink-0" />
-            <p className="text-[#6A7368] text-[12px] sm:text-[14px]">
+            <UsersIcon className="w-4 sm:w-5 h-4 sm:h-5 text-[#003087] mt-0.5 flex-shrink-0" />
+            <p className="text-[#003087] text-[12px] sm:text-[14px]">
               <strong>Network with members</strong> in the MBO community
             </p>
           </div>
@@ -326,7 +326,7 @@ const SuccessModal = ({ onCloseAndNavigate, userName }) => {
                 state: { subscriptionSuccess: true },
               });
             }}
-            className="bg-[#043D12] text-[#FFFDF2] rounded-[12px] px-5 sm:px-6 py-2 sm:py-2.5 font-medium text-[13px] sm:text-[14px] shadow-md hover:bg-[#032d0e] transition-all duration-300 w-full sm:w-auto cursor-pointer"
+            className="bg-[#003087] text-[#FEFEFF] rounded-[12px] px-5 sm:px-6 py-2 sm:py-2.5 font-medium text-[13px] sm:text-[14px] shadow-md hover:bg-[#003087] transition-all duration-300 w-full sm:w-auto cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -337,7 +337,7 @@ const SuccessModal = ({ onCloseAndNavigate, userName }) => {
               console.log("Go to Dashboard clicked"); // Debug log
               onCloseAndNavigate();
             }}
-            className="bg-transparent border-2 border-[#043D12] text-[#043D12] rounded-[12px] px-5 sm:px-6 py-2 sm:py-2.5 font-medium text-[13px] sm:text-[14px] hover:bg-[#043D12]/10 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+            className="bg-transparent border-2 border-[#043D12] text-[#003087] rounded-[12px] px-5 sm:px-6 py-2 sm:py-2.5 font-medium text-[13px] sm:text-[14px] hover:bg-[#003087]/10 transition-all duration-300 w-full sm:w-auto cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -345,7 +345,7 @@ const SuccessModal = ({ onCloseAndNavigate, userName }) => {
           </motion.button>
         </div>
 
-        <p className="text-[#6A7368] text-[10px] sm:text-[12px] mt-4 sm:mt-6 italic text-center">
+        <p className="text-[#003087] text-[10px] sm:text-[12px] mt-4 sm:mt-6 italic text-center">
           Set up your profile in minutes and start growing!
         </p>
       </motion.div>
@@ -869,7 +869,7 @@ const Subscribe = () => {
       {!showIntroModal && (
         <div className="container mx-auto px-[5vw] flex flex-col items-center gap-8">
           <motion.h1
-            className="text-[#FFFDF2] lg:text-[36px] text-[24px] w-[90%] md:w-[60%] mx-auto text-center font-bold"
+            className="text-[#FEFEFF] lg:text-[36px] text-[24px] w-[90%] md:w-[60%] mx-auto text-center font-bold"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -900,7 +900,7 @@ const Subscribe = () => {
               `}
             >
               {isLoadingSubscriptions ? (
-                <p className="text-[#FFFDF2] text-center">
+                <p className="text-[#FEFEFF] text-center">
                   Loading subscriptions...
                 </p>
               ) : subscriptions.length > 0 ? (
@@ -913,7 +913,7 @@ const Subscribe = () => {
                           ? "min-w-[280px] md:min-w-[320px]"
                           : "w-full"
                       }
-                      px-8 py-8 bg-[#FFFDF2]/90 shadow-lg rounded-[16px] flex relative 
+                      px-8 py-8 bg-[#FEFEFF]/90 shadow-lg rounded-[16px] flex relative 
                       ${
                         subscriptions.length > 1
                           ? "flex-col"
@@ -929,17 +929,17 @@ const Subscribe = () => {
                       to="/user-dashboard"
                       className="lg:text-[50px] text-[32px] font-bold text-[#363636] absolute top-4 left-4"
                     >
-                      <IoArrowBackCircle className="text-[#043D12] text-[40px]" />
+                      <IoArrowBackCircle className="text-[#003087] text-[40px]" />
                     </Link>
                     <div
                       className={`amount w-full flex flex-col items-center ${
                         subscriptions.length > 1 ? "" : "lg:pt-8"
                       }`}
                     >
-                      <h1 className="lg:text-[48px] text-[40px] text-[#043D12] flex items-center gap-0 font-bold">
+                      <h1 className="lg:text-[48px] text-[40px] text-[#003087] flex items-center gap-0 font-bold">
                         {formatPrice(subscription.price)}
                       </h1>
-                      <span className="lg:text-[20px] strict text-[16px] text-[#043D12]">
+                      <span className="lg:text-[20px] strict text-[16px] text-[#003087]">
                         YEARLY
                       </span>
                     </div>
@@ -977,12 +977,12 @@ const Subscribe = () => {
                         </li>
                       </ul>
                       <motion.div
-                        className="shadow-lg mt-6 register px-6 md:px-12 md:py-4 py-3 bg-[#043D12] rounded-[12px] text-[#FFFDF2] flex flex-col gap-2 w-full max-w-[280px] cursor-pointer"
+                        className="shadow-lg mt-6 register px-6 md:px-12 md:py-4 py-3 bg-[#003087] rounded-[12px] text-[#FEFEFF] flex flex-col gap-2 w-full max-w-[280px] cursor-pointer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
                         {initializingPayments ? (
-                          <p className="text-[#FFFDF2] text-[16px] text-center">
+                          <p className="text-[#FEFEFF] text-[16px] text-center">
                             Preparing payment...
                           </p>
                         ) : isPaymentLoading[subscription.id] ? (
@@ -1014,7 +1014,7 @@ const Subscribe = () => {
                             />
                           </>
                         ) : (
-                          <p className="text-[#FFFDF2] text-[16px] text-center">
+                          <p className="text-[#FEFEFF] text-[16px] text-center">
                             Payment unavailable
                           </p>
                         )}
@@ -1023,7 +1023,7 @@ const Subscribe = () => {
                   </motion.div>
                 ))
               ) : (
-                <p className="text-[#FFFDF2] text-center">
+                <p className="text-[#FEFEFF] text-center">
                   No subscriptions available. Please try again later.
                 </p>
               )}

@@ -125,18 +125,18 @@ const Faq = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen bg-[#FFFDF2]">
+      <div className="flex justify-center items-center h-screen bg-[#FEFEFF]">
         <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-200"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-400"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-200"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-400"></div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="w-full bg-[#FFFDF2] pb-10">
+    <div className="w-full bg-[#FEFEFF] pb-10">
       <div className="container mx-auto px-[5vw] flex flex-col gap-10">
         <div className="w-full flex flex-col lg:gap-4 gap-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-12">
@@ -148,10 +148,10 @@ const Faq = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <h1 className="lg:text-[30px] text-[25px] text-[#6A7368] font-bold">
+                <h1 className="lg:text-[30px] text-[25px] text-[#003087] font-bold">
                   Frequently Asked Questions
                 </h1>
-                <p className="md:text-[20px] text-[18px] text-[#6A7368] mt-2">
+                <p className="md:text-[20px] text-[18px] text-[#003087] mt-2">
                   Find answers to common questions
                 </p>
               </motion.div>
@@ -169,7 +169,7 @@ const Faq = () => {
             {/* FAQ Questions Column */}
             <div className="order-2 lg:h-[500px] lg:overflow-y-auto modern-scrollbar lg:pr-4 lg:py-8">
               {/* Search Bar */}
-              <div className="mb-6 w-full bg-[#D6E2D98C] text-[16px] px-4 py-3 rounded-[39px] shadow-lg text-[#043D12] flex gap-2 items-center">
+              <div className="mb-6 w-full bg-[#D6E2D98C] text-[16px] px-4 py-3 rounded-[39px] shadow-lg text-[#003087] flex gap-2 items-center">
                 <input
                   type="text"
                   className="h-full outline-0 w-full bg-transparent"
@@ -199,8 +199,8 @@ const Faq = () => {
                       <button
                         className={`flex justify-between items-center text-start ${
                           activeIndex === index
-                            ? "bg-[#043D12] text-white"
-                            : "bg-[#B5BBB4] text-[#043D12] hover:bg-[#043D12] hover:text-white"
+                            ? "bg-[#003087] text-white"
+                            : "bg-[#B5BBB4] text-[#003087] hover:bg-[#003087] hover:text-white"
                         } rounded-[26px] px-6 py-4 gap-4 w-full md:text-[18px] text-[15px] transition-colors`}
                         onClick={() => handleToggle(index)}
                       >
@@ -223,13 +223,13 @@ const Faq = () => {
                       transition={{ duration: 0.3 }}
                     >
                       {Array.isArray(item.answer) ? (
-                        <ul className="md:text-[17px] text-[15px] text-[#043D12] list-disc pl-5">
+                        <ul className="md:text-[17px] text-[15px] text-[#003087] list-disc pl-5">
                           {item.answer.map((line, i) => (
                             <li key={i}>{line}</li>
                           ))}
                         </ul>
                       ) : (
-                        <p className="md:text-[17px] text-[15px] text-[#043D12]">
+                        <p className="md:text-[17px] text-[15px] text-[#003087]">
                           {item.answer}
                         </p>
                       )}
@@ -244,15 +244,15 @@ const Faq = () => {
                     src="https://lottie.host/7fd33a4f-2e59-4f34-ba0c-4af37814586e/Cq1qkcf16G.lottie"
                     style={{ height: "200px", width: "200px" }}
                   />
-                  <h2 className="text-md font-bold text-[#043D12]">
+                  <h2 className="text-md font-bold text-[#003087]">
                     No FAQs Found
                   </h2>
-                  <p className="text-sm text-[#6A7368] text-center max-w-2xl">
+                  <p className="text-sm text-[#003087] text-center max-w-2xl">
                     We couldn't find any FAQs matching your search. Try
                     different keywords or check back later.
                   </p>
                   <button
-                    className="mt-4 bg-[#043D12] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-[#032d0e] transition-colors"
+                    className="mt-4 bg-[#003087] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-[#003087] transition-colors"
                     onClick={() => setSearchQuery("")}
                   >
                     Clear Search
@@ -262,14 +262,14 @@ const Faq = () => {
 
               {/* New Section: Did not find what you were looking for? */}
               <div className="mt-8 text-center">
-                <h3 className="text-[18px] font-semibold text-[#043D12] mb-4">
+                <h3 className="text-[18px] font-semibold text-[#003087] mb-4">
                   Did not find what you were looking for?
                 </h3>
                 <a
                   href="https://api.whatsapp.com/send?phone=2349078987890&text=Hello%20MindPower%20Support,%20I%20have%20a%20question:%20[Please%20describe%20your%20question%20or%20issue%20here]%0A%0AName:%20[Your%20Name]%0AProfile/Business:%20[Your%20Business%20Name%20or%20Profile%20ID]%0AThanks!"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#043D12] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-[#043D12]/90 transition-colors"
+                  className="inline-flex items-center gap-2 bg-[#003087] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-[#003087]/90 transition-colors"
                 >
                   <FaWhatsapp className="text-[18px]" />
                   Message

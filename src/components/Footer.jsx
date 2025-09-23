@@ -20,7 +20,7 @@ const Footer = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false }}
-      className="bg-[#FAFEF4] w-full h-fit flex flex-col justify-center items-center text-[#043D12]"
+      className="bg-[#FEFEFF] w-full h-fit flex flex-col justify-center items-center text-[#003087]"
     >
       <motion.div
         variants={fadeInUp}
@@ -33,7 +33,7 @@ const Footer = () => {
           <Link to="/" className="logo">
             <img src={MindPowerLogo} alt="Mind-Power-Logo" className="h-16" />
           </Link>
-          <p className="text-[16px] text-[#043D12]">
+          <p className="text-[16px] text-[#003087]">
             Your business deserves a platform designed for growth. Join a
             community where every connection is an opportunity.
           </p>
@@ -43,7 +43,7 @@ const Footer = () => {
                 key={index}
                 variants={fadeInUp}
                 href="#"
-                className="text-[#043D12] text-[28px] hover:scale-110 transition-transform"
+                className="text-[#003087] text-[28px] hover:scale-110 transition-transform"
               >
                 <Icon />
               </motion.a>
@@ -96,7 +96,7 @@ const Footer = () => {
         variants={fadeInUp}
         className="max-md:w-[90%] mx-auto lg:h-[10vh] h-[15vh] policies text-[14px] flex flex-col gap-2 w-full items-center justify-center border-t-[1px] border-[#043D12] py-4 max-md:text-center"
       >
-        <p className="text-[#043D12]">© 2025 MindPower. All rights reserved.</p>
+        <p className="text-[#003087]">© 2025 MindPower. All rights reserved.</p>
         <a
           href="https://api.whatsapp.com/send?phone=2348188155501"
           className="border-b-[1px] hover:font-bold"

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"; // Import useEffect
+import React, { useEffect } from "react"; 
 // import SEO from "./components/SEO";
 import { ToastContainer } from "react-toastify";
 import { Routes, Route, useLocation } from "react-router-dom"; // Import useLocation

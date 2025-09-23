@@ -192,9 +192,9 @@ const BusinessProfile = () => {
 
   return (
     <div className="w-full h-screen flex justify-center lg:grid grid-cols-2">
-      <div className="max-lg:hidden w-full h-full flex justify-center items-center bg-[url('/Group2.svg')] bg-cover bg-center bg-green-800">
+      <div className="max-lg:hidden w-full h-full flex justify-center items-center bg-[url('/Group2.svg')] bg-cover bg-center bg-[#003087]">
         <div className="w-full h-[90%] flex flex-col items-center">
-          <div className="container px-[5vw] mx-auto text-[#FFFDF2] mt-8">
+          <div className="container px-[5vw] mx-auto text-[#FEFEFF] mt-8">
             <Link
               to="/"
               className="lg:text-[50px] text-[32px] font-medium leading-[70px]"
@@ -207,9 +207,9 @@ const BusinessProfile = () => {
           </div>
         </div>
       </div>
-      <div className="relative max-lg:w-full flex flex-col items-center lg:justify-center bg-[#FFFDF2] max-md:bg-[url('/bg-login.svg')] bg-cover bg-center">
+      <div className="relative max-lg:w-full flex flex-col items-center lg:justify-center bg-[#FEFEFF] max-md:bg-[url('/bg-login.svg')] bg-cover bg-center">
         <div className="container px-[5vw] mx-auto h-fit max-lg:mt-20">
-          <div className="absolute top-0 right-0 m-2 text-[#043D12] font-medium">
+          <div className="absolute top-0 right-0 m-2 text-[#003087] font-medium">
             1 of 2
           </div>
           <Link
@@ -218,7 +218,7 @@ const BusinessProfile = () => {
           >
             MBO
           </Link>
-          <h4 className="lg:text-[32px] text-[20px] font-medium text-[#043D12] flex items-center gap-2">
+          <h4 className="lg:text-[32px] text-[20px] font-medium text-[#003087] flex items-center gap-2">
             Set Up Business Profile <Hand />
           </h4>
           <form
@@ -231,7 +231,7 @@ const BusinessProfile = () => {
                 validationErrors.businessName ? "[#FF0000]" : "[#363636]"
               } flex items-center gap-2 lg:h-[60px] h-[48px]`}
             >
-              <BsPerson className="text-[#6A7368]" />
+              <BsPerson className="text-[#003087]" />
               <input
                 type="text"
                 name="businessName"
@@ -245,7 +245,7 @@ const BusinessProfile = () => {
                     businessName: false,
                   }));
                 }}
-                className="w-full h-full border-none focus:outline-none text-[#6A7368]"
+                className="w-full h-full border-none focus:outline-none text-[#003087]"
               />
             </div>
 
@@ -257,38 +257,38 @@ const BusinessProfile = () => {
             >
               <button
                 type="button"
-                className="flex items-center justify-between text-[#6A7368] w-full h-[48px] focus:outline-none cursor-pointer"
+                className="flex items-center justify-between text-[#003087] w-full h-[48px] focus:outline-none cursor-pointer"
                 onClick={toggleDropdown}
               >
                 <div className="flex items-center gap-2">
-                  <MdOutlineCategory className="text-[#6A7368] text-[18px]" />
+                  <MdOutlineCategory className="text-[#003087] text-[18px]" />
                   <span className="text-sm md:text-base">
                     {selectedCategory.name || "Select Business Category"}
                   </span>
                 </div>
                 {showDropdown ? (
-                  <IoMdArrowDropup className="text-[#6A7368]" />
+                  <IoMdArrowDropup className="text-[#003087]" />
                 ) : (
-                  <IoMdArrowDropdown className="text-[#6A7368]" />
+                  <IoMdArrowDropdown className="text-[#003087]" />
                 )}
               </button>
               {showDropdown && isLoadingCategories ? (
-                <p className="absolute top-[50px] left-0 w-full bg-[#FFFDF2] text-[#043D12] p-2">
+                <p className="absolute top-[50px] left-0 w-full bg-[#FEFEFF] text-[#003087] p-2">
                   Loading categories...
                 </p>
               ) : showDropdown && categories.length > 0 ? (
-                <ul className="absolute top-[50px] border-4 border-[#043D12] left-0 w-full bg-[#FFFDF2] text-[#043D12] rounded-[25px] mt-2 p-2 shadow-lg max-h-[200px] overflow-y-auto z-10">
+                <ul className="absolute top-[50px] border-4 border-[#043D12] left-0 w-full bg-[#FEFEFF] text-[#003087] rounded-[25px] mt-2 p-2 shadow-lg max-h-[200px] overflow-y-auto z-10">
                   {categories.map((category) => (
                     <li
                       key={category.id}
-                      className="py-2 px-4 cursor-pointer hover:bg-[#043D12]/30 rounded-[20px]"
+                      className="py-2 px-4 cursor-pointer hover:bg-[#003087]/30 rounded-[20px]"
                       onClick={() =>
                         handleCategorySelect(category.id, category.name)
                       }
                     >
                       {category.name}
                       {category.description && (
-                        <p className="text-xs text-[#043D12]/90">
+                        <p className="text-xs text-[#003087]/90">
                           {category.description}
                         </p>
                       )}
@@ -296,7 +296,7 @@ const BusinessProfile = () => {
                   ))}
                 </ul>
               ) : showDropdown ? (
-                <p className="absolute top-[50px] left-0 w-full bg-[#FFFDF2] text-[#043D12] p-2">
+                <p className="absolute top-[50px] left-0 w-full bg-[#FEFEFF] text-[#003087] p-2">
                   No categories available.
                 </p>
               ) : null}
@@ -307,11 +307,11 @@ const BusinessProfile = () => {
                 {keywords.map((keyword, index) => (
                   <div
                     key={index}
-                    className="bg-[#043D12] text-[#FFFDF2] rounded-full px-3 py-1 flex items-center gap-1 text-sm shadow-md transition-all duration-200 hover:bg-[#1A5A2C]"
+                    className="bg-[#003087] text-[#FEFEFF] rounded-full px-3 py-1 flex items-center gap-1 text-sm shadow-md transition-all duration-200 hover:bg-[#1A5A2C]"
                   >
                     {keyword}
                     <FaTimes
-                      className="cursor-pointer text-[#FFFDF2] hover:text-red-300"
+                      className="cursor-pointer text-[#FEFEFF] hover:text-red-300"
                       onClick={() => removeKeyword(index)}
                     />
                   </div>
@@ -329,10 +329,10 @@ const BusinessProfile = () => {
                       onKeyPress={handleKeyPress}
                       onFocus={() => setIsKeywordInputFocused(true)}
                       onBlur={() => setIsKeywordInputFocused(false)}
-                      className="border-[1px] rounded-[20px] px-4 py-2 border-[#363636] text-[#6A7368] focus:outline-none w-40 h-10"
+                      className="border-[1px] rounded-[20px] px-4 py-2 border-[#363636] text-[#003087] focus:outline-none w-40 h-10"
                     />
                     <div
-                      className={`absolute left-0 top-12 w-64 bg-[#043D12] text-[#FFFDF2] text-sm rounded-lg p-2 opacity-0 ${
+                      className={`absolute left-0 top-12 w-64 bg-[#003087] text-[#FEFEFF] text-sm rounded-lg p-2 opacity-0 ${
                         !isKeywordInputFocused && "group-hover:opacity-100"
                       } transition-opacity duration-200 pointer-events-none shadow-lg z-10`}
                     >
@@ -346,7 +346,7 @@ const BusinessProfile = () => {
                   <button
                     type="button"
                     onClick={addKeyword}
-                    className="bg-[#043D12] text-[#FFFDF2] rounded-full p-2 hover:bg-[#1A5A2C] transition-all duration-200"
+                    className="bg-[#003087] text-[#FEFEFF] rounded-full p-2 hover:bg-[#1A5A2C] transition-all duration-200"
                   >
                     <FaPlus />
                   </button>
@@ -354,7 +354,7 @@ const BusinessProfile = () => {
               )}
               <p
                 className={`text-xs ${
-                  validationErrors.keywords ? "text-red-500" : "text-[#6A7368]"
+                  validationErrors.keywords ? "text-red-500" : "text-[#003087]"
                 } mt-1`}
               >
                 {keywords.length}/5 keywords added (min 3, max 5)
@@ -366,7 +366,7 @@ const BusinessProfile = () => {
                 validationErrors.description ? "[#FF0000]" : "[#363636]"
               } flex items-start gap-2`}
             >
-              <TbFileDescription className="text-[#6A7368] mt-1" />
+              <TbFileDescription className="text-[#003087] mt-1" />
               <textarea
                 name="description"
                 required
@@ -379,14 +379,14 @@ const BusinessProfile = () => {
                     description: false,
                   }));
                 }}
-                className="w-full h-24 border-none focus:outline-none text-[#6A7368] resize-none bg-transparent"
+                className="w-full h-24 border-none focus:outline-none text-[#003087] resize-none bg-transparent"
               />
             </div>
 
             <button
               type="submit"
               disabled={loading}
-              className="cursor-pointer md:mt-6 mt-16 w-full text-[#FFFDF2] bg-[#043D12] hover:bg-[#043D12]/75 shadow-lg rounded-[27px] px-8 flex justify-center items-center lg:h-[60px] h-[48px] disabled:opacity-50"
+              className="cursor-pointer md:mt-6 mt-16 w-full text-[#FEFEFF] bg-[#003087] hover:bg-[#003087]/75 shadow-lg rounded-[27px] px-8 flex justify-center items-center lg:h-[60px] h-[48px] disabled:opacity-50"
             >
               {loading ? "Submitting..." : "Next"}
             </button>

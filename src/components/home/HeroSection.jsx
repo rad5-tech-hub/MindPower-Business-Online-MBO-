@@ -58,9 +58,9 @@ const HeroSection = () => {
     <motion.div
       whileInView="visible"
       viewport={{ once: false }}
-      className="w-full flex flex-col justify-center items-center bg-[#FFFDF2] overflow-hidden"
+      className="w-full flex flex-col justify-center items-center bg-[#FEFEFF] overflow-hidden"
     >
-      <div className="h-full container mx-auto px-[5vw] text-[#043D12] grid md:grid-cols-2 grid-cols-1 justify-center">
+      <div className="h-full container mx-auto px-[5vw] text-[#003087] grid md:grid-cols-2 grid-cols-1 justify-center">
         {/* Animated Text Section */}
         <motion.div
           initial="hidden"
@@ -70,14 +70,14 @@ const HeroSection = () => {
           className="details flex flex-col md:gap-4 gap-4 md:text-left md:py-12 h-full "
         >
           <div className="bg-[url('/carbon-growth.svg')] bg-no-repeat object-fit bg-cover bg-center flex flex-col justify-center items-center lg:gap-4 gap-2">
-            <h1 className="text-[#043D12] lg:text-[45px] lg:leading-[45px] text-[32px] max-w-full lg:mt-8 font-medium max-md:text-center">
+            <h1 className="text-[#003087] lg:text-[45px] lg:leading-[45px] text-[32px] max-w-full lg:mt-8 font-medium max-md:text-center">
               Elevate Your Business. Discover Great Products.
               <br className="" />
               <strong className="lg:text-[32px] text-[20px] italic">
                 Connect. Showcase. Shop. Grow.
               </strong>
             </h1>
-            <p className="lg:text-[22px] text-[14px] max-w-full mx-auto md:mx-0 text-[#6A7368] max-md:text-center">
+            <p className="lg:text-[22px] text-[14px] max-w-full mx-auto md:mx-0 text-[#003087] max-md:text-center">
               Whether you're a business owner or a shopper — this is your space.
               Build your online presence or explore unique brands and products.
             </p>
@@ -93,8 +93,8 @@ const HeroSection = () => {
                 onClick={() => setActiveButton("create")}
                 className={`block w-fit rounded-[48px] shadow-lg lg:text-[18px] text-[14px] font-bold px-6 py-4 transition-all duration-300 border-2 border-[#043D12] ${
                   activeButton === "create"
-                    ? "bg-[#043D12] text-white hover:bg-[#032a0d]"
-                    : "bg-transparent text-[#043D12] hover:bg-[#043D12]/10"
+                    ? "bg-[#003087] text-white hover:bg-[#032a0d]"
+                    : "bg-transparent text-[#003087] hover:bg-[#003087]/10"
                 }`}
               >
                 Set Up My Business
@@ -111,8 +111,8 @@ const HeroSection = () => {
                 onClick={() => setActiveButton("explore")}
                 className={`block w-fit rounded-[48px] shadow-lg lg:text-[18px] text-[14px] font-bold px-6 py-4 transition-all duration-300 border-2 border-[#043D12] ${
                   activeButton === "explore"
-                    ? "bg-[#043D12] text-white hover:bg-[#032a0d]"
-                    : "bg-transparent text-[#043D12] hover:bg-[#043D12]/10"
+                    ? "bg-[#003087] text-white hover:bg-[#032a0d]"
+                    : "bg-transparent text-[#003087] hover:bg-[#003087]/10"
                 }`}
               >
                 Browse Products

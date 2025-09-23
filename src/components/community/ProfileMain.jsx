@@ -98,7 +98,7 @@ const VideoModal = ({ videoUrl, onClose }) => {
         >
           <motion.button
             onClick={onClose}
-            className="absolute top-4 right-4 text-white bg-[#043D12]/80 rounded-full p-2 hover:bg-[#043D12] transition-colors z-50"
+            className="absolute top-4 right-4 text-white bg-[#003087]/80 rounded-full p-2 hover:bg-[#003087] transition-colors z-50"
             whileHover={{ scale: 1.2, rotate: 90 }}
             transition={{ duration: 0.3 }}
           >
@@ -162,7 +162,7 @@ const ProductModal = ({ product, profile, onClose }) => {
         onClick={onClose}
       >
         <motion.div
-          className="relative bg-gradient-to-br from-[#FFFDF2] to-white rounded-2xl shadow-2xl w-[90%] max-w-lg p-8 overflow-hidden"
+          className="relative bg-gradient-to-br from-[#FEFEFF] to-white rounded-2xl shadow-2xl w-[90%] max-w-lg p-8 overflow-hidden"
           initial={{ scale: 0.9, y: 50 }}
           animate={{ scale: 1, y: 0 }}
           exit={{ scale: 0.9, y: 50 }}
@@ -171,7 +171,7 @@ const ProductModal = ({ product, profile, onClose }) => {
         >
           <motion.button
             onClick={onClose}
-            className="absolute top-2 right-6 text-[#6A7368] hover:text-[#043D12] text-xl z-10"
+            className="absolute top-2 right-6 text-[#003087] hover:text-[#003087] text-xl z-10"
             whileHover={{ scale: 1.2, rotate: 90 }}
             transition={{ duration: 0.3 }}
           >
@@ -192,7 +192,7 @@ const ProductModal = ({ product, profile, onClose }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-0" />
           </motion.div>
           <motion.h2
-            className="text-2xl font-bold text-[#043D12] mb-4"
+            className="text-2xl font-bold text-[#003087] mb-4"
             title={product.name}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -201,7 +201,7 @@ const ProductModal = ({ product, profile, onClose }) => {
             {product.name || "Unnamed Product"}
           </motion.h2>
           <motion.p
-            className="flex items-center gap-2 text-[#6A7368] text-sm mb-4"
+            className="flex items-center gap-2 text-[#003087] text-sm mb-4"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
@@ -210,7 +210,7 @@ const ProductModal = ({ product, profile, onClose }) => {
             {profile.categories[0]?.name || "Unknown Category"}
           </motion.p>
           <motion.p
-            className="text-[#6A7368] text-sm mb-4"
+            className="text-[#003087] text-sm mb-4"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
@@ -230,7 +230,7 @@ const ProductModal = ({ product, profile, onClose }) => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#043D12] hover:text-white p-2 rounded-full bg-[#F5F7F5] hover:bg-[#043D12] transition-all duration-300"
+                  className="text-[#003087] hover:text-white p-2 rounded-full bg-[#F5F7F5] hover:bg-[#003087] transition-all duration-300"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
@@ -246,7 +246,7 @@ const ProductModal = ({ product, profile, onClose }) => {
           {profile.member?.email && (
             <motion.a
               href={`mailto:${profile.member.email}`}
-              className="flex items-center gap-2 text-[#043D12] hover:text-[#032d0e] text-sm mb-4"
+              className="flex items-center gap-2 text-[#003087] hover:text-[#003087] text-sm mb-4"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7 }}
@@ -259,7 +259,7 @@ const ProductModal = ({ product, profile, onClose }) => {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block w-full text-center bg-[#043D12] text-white py-2 rounded-lg hover:bg-[#032d0e] transition-colors duration-300"
+              className="inline-block w-full text-center bg-[#003087] text-white py-2 rounded-lg hover:bg-[#003087] transition-colors duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
@@ -349,7 +349,7 @@ const ReportModal = ({ profile, onClose }) => {
         onClick={onClose}
       >
         <motion.div
-          className="bg-[#FFFDF2] p-6 rounded-lg shadow-lg w-[90%] max-w-md"
+          className="bg-[#FEFEFF] p-6 rounded-lg shadow-lg w-[90%] max-w-md"
           initial={{ scale: 0.8 }}
           animate={{ scale: 1 }}
           exit={{ scale: 0.8 }}
@@ -446,7 +446,7 @@ const ReportModal = ({ profile, onClose }) => {
                 className={`w-full py-2 rounded-md text-white transition-colors ${
                   isSubmitting
                     ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-[#043D12] hover:bg-[#032d0e]"
+                    : "bg-[#003087] hover:bg-[#003087]"
                 }`}
                 disabled={isSubmitting}
               >
@@ -491,11 +491,11 @@ const ProfileMain = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen bg-[#FFFDF2]">
+      <div className="flex justify-center items-center h-screen bg-[#FEFEFF]">
         <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-200"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-400"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-200"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-400"></div>
         </div>
       </div>
     );
@@ -514,12 +514,12 @@ const ProfileMain = () => {
   const whatsappUrl = getWhatsAppUrl(profile);
 
   return (
-    <div className="w-full min-h-screen bg-[#FFFDF2] flex flex-col items-center pt-[10vh]">
+    <div className="w-full min-h-screen bg-[#FEFEFF] flex flex-col items-center pt-[10vh]">
       <div className="container px-[5vw] mx-auto py-8">
-        <div className="w-full text-[#043D12] flex flex-col md:flex-row gap-8">
-          <aside className="md:w-[25%] flex flex-col gap-8 text-[#6A7368]">
+        <div className="w-full text-[#003087] flex flex-col md:flex-row gap-8">
+          <aside className="md:w-[25%] flex flex-col gap-8 text-[#003087]">
             <h3
-              className="lg:text-[20px] text-[#043D12] text-center md:text-left text-[18px] md:text-[28px] font-bold hover:whitespace-normal hover:overflow-visible hover:z-10"
+              className="lg:text-[20px] text-[#003087] text-center md:text-left text-[18px] md:text-[28px] font-bold hover:whitespace-normal hover:overflow-visible hover:z-10"
               title={profile.businessName}
             >
               {profile.businessName}
@@ -542,7 +542,7 @@ const ProfileMain = () => {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 border-[1px] border-[#043D12] hover:bg-[#043D12] hover:text-white rounded-[28px] px-4 md:px-12 py-2 shadow text-[14px]"
+                  className="flex items-center justify-center gap-2 border-[1px] border-[#043D12] hover:bg-[#003087] hover:text-white rounded-[28px] px-4 md:px-12 py-2 shadow text-[14px]"
                   onClick={() => trackWhatsAppClick(profile.id)}
                 >
                   <FaWhatsapp />
@@ -558,7 +558,7 @@ const ProfileMain = () => {
                 <li>{profile.views || 0}</li>
               </ul>
               <div className="web-share">
-                <p className="text-[12px] text-[#043D12] font-medium px-2 py-1 w-fit">
+                <p className="text-[12px] text-[#003087] font-medium px-2 py-1 w-fit">
                   ON THE WEB
                 </p>
                 <div className="content border-[1px] border-[#6A7368] rounded-[11px] cursor-pointer">
@@ -659,7 +659,7 @@ const ProfileMain = () => {
                 </div>
               </div>
               <div className="description flex flex-col gap-2">
-                <h5 className="text-[10px] text-[#6A7368]">
+                <h5 className="text-[10px] text-[#003087]">
                   BUSINESS DESCRIPTION
                 </h5>
                 <p className="text-[13px] md:text-[14px]">
@@ -667,13 +667,13 @@ const ProfileMain = () => {
                 </p>
               </div>
               <div className="keywords flex flex-col gap-2">
-                <h5 className="text-[10px] text-[#6A7368]">KEYWORDS</h5>
+                <h5 className="text-[10px] text-[#003087]">KEYWORDS</h5>
                 <p className="text-[13px] md:text-[14px]">
                   {profile.keyword?.join(", ") || "No keywords available"}
                 </p>
               </div>
               <div className="flex flex-col gap-4 pb-4">
-                <p className="text-[12px] text-[#043D12] font-medium px-2 py-1 w-fit">
+                <p className="text-[12px] text-[#003087] font-medium px-2 py-1 w-fit">
                   CONTACT
                 </p>
                 <div className="content border-[1px] border-[#6A7368] rounded-[11px]">
@@ -713,7 +713,7 @@ const ProfileMain = () => {
                   )}
                 </div>
                 <div className="membership flex flex-col gap-2">
-                  <h5 className="text-[10px] text-[#6A7368]">
+                  <h5 className="text-[10px] text-[#003087]">
                     Member Since:{" "}
                     {new Date(profile.createdAt).toLocaleDateString("en-US", {
                       day: "numeric",
@@ -722,7 +722,7 @@ const ProfileMain = () => {
                     })}
                   </h5>
                   <p
-                    className="text-[16px] text-[#6A7368] cursor-pointer font-bold underline hover:text-[#043D12]"
+                    className="text-[16px] text-[#003087] cursor-pointer font-bold underline hover:text-[#003087]"
                     onClick={() => setIsReportModalOpen(true)}
                   >
                     Report business
@@ -732,7 +732,7 @@ const ProfileMain = () => {
             </div>
           </aside>
           <div className="md:w-[75%] flex flex-col gap-8">
-            <h1 className="border-b-[1px] border-[#6A7368] text-[20px] text-[#6A7368] pb-1 text-center md:text-left">
+            <h1 className="border-b-[1px] border-[#6A7368] text-[20px] text-[#003087] pb-1 text-center md:text-left">
               Products/Services
             </h1>
             {filteredProducts.length > 0 ? (
@@ -754,7 +754,7 @@ const ProfileMain = () => {
                         className="rounded-lg w-full h-[250px] object-cover"
                         onError={(e) => (e.target.src = BusinessImg)}
                       />
-                      <figcaption className="flex flex-col gap-4 text-[#043D12] py-2">
+                      <figcaption className="flex flex-col gap-4 text-[#003087] py-2">
                         <div className="flex flex-col gap-1">
                           <b
                             className="lg:text-[15px] text-[10px] md:text-[12px]"
@@ -776,16 +776,16 @@ const ProfileMain = () => {
                   src="https://lottie.host/7fd33a4f-2e59-4f34-ba0c-4af37814586e/Cq1qkcf16G.lottie"
                   style={{ height: "300px", width: "300px" }}
                 />
-                <h2 className="text-md font-bold text-[#043D12]">
+                <h2 className="text-md font-bold text-[#003087]">
                   No Products Available
                 </h2>
-                <p className="text-sm text-[#6A7368] text-center max-w-2xl">
+                <p className="text-sm text-[#003087] text-center max-w-2xl">
                   It looks like this business hasn't added any products or
                   services yet. Check back later or explore other businesses in
                   the community!
                 </p>
                 <button
-                  className="mt-4 bg-[#043D12] text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-[#032d0e] transition-colors cursor-pointer"
+                  className="mt-4 bg-[#003087] text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-[#003087] transition-colors cursor-pointer"
                   onClick={() => navigate("/community")}
                 >
                   Explore Community

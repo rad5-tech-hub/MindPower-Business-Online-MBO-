@@ -609,7 +609,7 @@ const EditProfile = () => {
                   );
                 }}
               />
-              <figcaption className="text-center mt-2 text-[#6A7368]">
+              <figcaption className="text-center mt-2 text-[#003087]">
                 <h4 className="text-sm sm:text-base md:text-lg font-semibold">
                   {profileData.businessName}
                 </h4>
@@ -622,8 +622,8 @@ const EditProfile = () => {
             <button
               className={`mt-4 sm:mt-0 border rounded-[11px] text-[10px] sm:text-sm px-4 sm:px-6 py-2 sm:py-3 shadow-lg transition-transform cursor-pointer ${
                 buttonActive.changeImage
-                  ? "scale-95 bg-[#043D12] text-white"
-                  : "hover:bg-[#043D12] hover:text-white"
+                  ? "scale-95 bg-[#003087] text-white"
+                  : "hover:bg-[#003087] hover:text-white"
               }`}
               onClick={() => {
                 setButtonActive((prev) => ({ ...prev, changeImage: true }));
@@ -653,7 +653,7 @@ const EditProfile = () => {
             </h2>
             <div className="w-full flex flex-col sm:flex-row items-center gap-6 sm:gap-12 mt-4">
               <div className="w-full flex flex-col gap-6 sm:gap-8">
-                <div className="text-[#6A7368] flex flex-col gap-2">
+                <div className="text-[#003087] flex flex-col gap-2">
                   <label className="text-sm">First Name</label>
                   <div className="flex justify-between gap-4">
                     <input
@@ -675,8 +675,8 @@ const EditProfile = () => {
                       onClick={() => handleEditClick("firstName")}
                       className={`rounded-[11px] text-[14px] px-4 py-2 shadow-lg flex items-center justify-between gap-2 border-[1px] border-[#6A7368] transition-transform ${
                         buttonActive.firstName
-                          ? "scale-95 bg-[#043D12] text-white"
-                          : "hover:bg-[#043D12] hover:text-white"
+                          ? "scale-95 bg-[#003087] text-white"
+                          : "hover:bg-[#003087] hover:text-white"
                       }`}
                     >
                       <FiEdit3 className="text-[18px]" />
@@ -684,7 +684,7 @@ const EditProfile = () => {
                     </button>
                   </div>
                 </div>
-                <div className="w-full text-[#6A7368] flex flex-col gap-2">
+                <div className="w-full text-[#003087] flex flex-col gap-2">
                   <label className="text-sm">Last Name</label>
                   <div className="flex justify-between gap-4">
                     <input
@@ -706,8 +706,8 @@ const EditProfile = () => {
                       onClick={() => handleEditClick("lastName")}
                       className={`rounded-[11px] text-[14px] px-4 py-2 shadow-lg flex items-center justify-between gap-2 border-[1px] border-[#6A7368] transition-transform ${
                         buttonActive.lastName
-                          ? "scale-95 bg-[#043D12] text-white"
-                          : "hover:bg-[#043D12] hover:text-white"
+                          ? "scale-95 bg-[#003087] text-white"
+                          : "hover:bg-[#003087] hover:text-white"
                       }`}
                     >
                       <FiEdit3 className="text-[18px]" />
@@ -717,7 +717,7 @@ const EditProfile = () => {
                 </div>
               </div>
               <div className="w-full flex flex-col gap-6 sm:gap-8">
-                <div className="account-details text-[#6A7368] border rounded-[11px] shadow w-full flex flex-col justify-center px-4 py-2 gap-6 sm:gap-8">
+                <div className="account-details text-[#003087] border rounded-[11px] shadow w-full flex flex-col justify-center px-4 py-2 gap-6 sm:gap-8">
                   <div>
                     <TbLayoutGrid className="text-[24px] sm:text-[30px]" />
                     <p className="text-[12px] sm:text-[14px]">
@@ -731,7 +731,7 @@ const EditProfile = () => {
                 <div className="flex justify-between gap-4 relative">
                   <button
                     type="button"
-                    className="w-full h-[46px] px-4 rounded-[11px] border-[1px] border-[#6A7368] text-[#6A7368] text-[12px] sm:text-sm overflow-hidden text-ellipsis whitespace-nowrap"
+                    className="w-full h-[46px] px-4 rounded-[11px] border-[1px] border-[#6A7368] text-[#003087] text-[12px] sm:text-sm overflow-hidden text-ellipsis whitespace-nowrap"
                     onClick={() => handleShareAction("copy")}
                     disabled={!shareableLink}
                     title={shareableLink || "Generating shareable link..."}
@@ -787,8 +787,8 @@ const EditProfile = () => {
                   onClick={() => handleDiscardChanges("personal")}
                   className={`border-[1px] border-[#6A7368] rounded-[11px] text-[12px] sm:text-[15px] px-4 sm:px-8 py-2 sm:py-3 shadow-lg transition-transform ${
                     buttonActive.personalSubmit
-                      ? "text-[#6A7368] hover:bg-gray-200"
-                      : "bg-[#043D12] text-white hover:bg-[#032b0e]"
+                      ? "text-[#003087] hover:bg-gray-200"
+                      : "bg-[#003087] text-white hover:bg-[#032b0e]"
                   }`}
                 >
                   Discard Changes
@@ -797,8 +797,8 @@ const EditProfile = () => {
                   type="submit"
                   className={`border-[1px] border-[#6A7368] rounded-[11px] text-[12px] sm:text-[15px] px-4 sm:px-8 py-2 sm:py-3 shadow-lg transition-transform flex items-center justify-center gap-2 ${
                     buttonActive.personalSubmit
-                      ? "scale-95 bg-[#043D12] text-white"
-                      : "text-[#6A7368] hover:bg-[#043D12] hover:text-white"
+                      ? "scale-95 bg-[#003087] text-white"
+                      : "text-[#003087] hover:bg-[#003087] hover:text-white"
                   }`}
                   disabled={buttonActive.personalSubmit}
                 >
@@ -823,11 +823,11 @@ const EditProfile = () => {
               <div className="bg-white p-8 rounded-2xl w-[32rem] max-w-[90%] shadow-2xl transform transition-all duration-300 scale-100 hover:scale-105">
                 <h2
                   id="subscription-modal-title"
-                  className="text-2xl font-semibold text-[#043D12] mb-4"
+                  className="text-2xl font-semibold text-[#003087] mb-4"
                 >
                   Heads up!
                 </h2>
-                <p className="text-[#6A7368] mb-6">
+                <p className="text-[#003087] mb-6">
                   You cannot share your profile until you subscribe.
                   <br />
                   Want to share your profile with others? Unlock it with a
@@ -835,14 +835,14 @@ const EditProfile = () => {
                 </p>
                 <div className="flex justify-end gap-3">
                   <button
-                    className="px-6 py-2.5 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200 text-[#6A7368] font-medium cursor-pointer"
+                    className="px-6 py-2.5 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200 text-[#003087] font-medium cursor-pointer"
                     onClick={() => setShowShareSubscriptionModal(false)}
                   >
                     Close
                   </button>
                   <a
                     href="/subscribe"
-                    className="px-6 py-2.5 bg-[#043D12] text-white rounded-lg hover:bg-[#03280E] transition-colors duration-200 font-medium cursor-pointer"
+                    className="px-6 py-2.5 bg-[#003087] text-white rounded-lg hover:bg-[#03280E] transition-colors duration-200 font-medium cursor-pointer"
                   >
                     Subscribe Now
                   </a>
@@ -856,7 +856,7 @@ const EditProfile = () => {
               Business Information
             </h2>
             <div className="mt-4 flex flex-col gap-6 sm:gap-8">
-              <div className="text-[#6A7368] flex flex-col gap-2">
+              <div className="text-[#003087] flex flex-col gap-2">
                 <label className="text-sm">Business Name</label>
                 <div className="flex justify-between gap-4">
                   <input
@@ -878,8 +878,8 @@ const EditProfile = () => {
                     onClick={() => handleEditClick("businessName")}
                     className={`rounded-[11px] text-[14px] px-4 py-2 shadow-lg flex items-center justify-between gap-2 border-[1px] border-[#6A7368] transition-transform ${
                       buttonActive.businessName
-                        ? "scale-95 bg-[#043D12] text-white"
-                        : "hover:bg-[#043D12] hover:text-white"
+                        ? "scale-95 bg-[#003087] text-white"
+                        : "hover:bg-[#003087] hover:text-white"
                     }`}
                   >
                     <FiEdit3 className="text-[18px]" />
@@ -887,13 +887,13 @@ const EditProfile = () => {
                   </button>
                 </div>
               </div>
-              <div className="text-[#6A7368] flex flex-col gap-2">
+              <div className="text-[#003087] flex flex-col gap-2">
                 <label className="text-sm">Category</label>
                 <div className="flex justify-between gap-4 relative">
                   <button
                     type="button"
                     onClick={toggleDropdown}
-                    className={`w-full h-[46px] px-4 rounded-[11px] border-[1px] border-[#6A7368] flex items-center justify-between text-left text-[#6A7368] focus:outline-none ${
+                    className={`w-full h-[46px] px-4 rounded-[11px] border-[1px] border-[#6A7368] flex items-center justify-between text-left text-[#003087] focus:outline-none ${
                       editField === "category"
                         ? "border-[#043D12] bg-green-50 focus:ring-2 focus:ring-[#043D12]"
                         : "border-[#6A7368]"
@@ -901,34 +901,34 @@ const EditProfile = () => {
                     disabled={editField !== "category"}
                   >
                     <div className="flex items-center gap-2 flex-grow">
-                      <MdOutlineCategory className="text-[#6A7368] text-[18px]" />
+                      <MdOutlineCategory className="text-[#003087] text-[18px]" />
                       <span className="text-sm whitespace-nowrap overflow-hidden text-ellipsis">
                         {selectedCategory.name || "Select Business Category"}
                       </span>
                     </div>
                     {showDropdown ? (
-                      <IoMdArrowDropup className="text-[#6A7368] cursor-pointer" />
+                      <IoMdArrowDropup className="text-[#003087] cursor-pointer" />
                     ) : (
-                      <IoMdArrowDropdown className="text-[#6A7368] cursor-pointer" />
+                      <IoMdArrowDropdown className="text-[#003087] cursor-pointer" />
                     )}
                   </button>
                   {showDropdown && isLoadingCategories ? (
-                    <p className="absolute top-[50px] left-0 w-full bg-[#FFFDF2] text-[#043D12] p-2 z-10 text-sm">
+                    <p className="absolute top-[50px] left-0 w-full bg-[#FEFEFF] text-[#003087] p-2 z-10 text-sm">
                       Loading categories...
                     </p>
                   ) : showDropdown && categories.length > 0 ? (
-                    <ul className="absolute top-[50px] left-0 w-full bg-[#FFFDF2] text-[#043D12] border-4 border-[#043D12] rounded-[25px] mt-2 p-2 shadow-lg max-h-[200px] overflow-y-auto z-10">
+                    <ul className="absolute top-[50px] left-0 w-full bg-[#FEFEFF] text-[#003087] border-4 border-[#043D12] rounded-[25px] mt-2 p-2 shadow-lg max-h-[200px] overflow-y-auto z-10">
                       {categories.map((category) => (
                         <li
                           key={category.id}
-                          className="py-2 px-4 cursor-pointer hover:bg-[#043D12]/30 rounded-[20px] text-sm"
+                          className="py-2 px-4 cursor-pointer hover:bg-[#003087]/30 rounded-[20px] text-sm"
                           onClick={() =>
                             handleCategorySelect(category.id, category.name)
                           }
                         >
                           {category.name}
                           {category.description && (
-                            <p className="text-xs text-[#043D12]/90">
+                            <p className="text-xs text-[#003087]/90">
                               {category.description}
                             </p>
                           )}
@@ -936,7 +936,7 @@ const EditProfile = () => {
                       ))}
                     </ul>
                   ) : showDropdown ? (
-                    <p className="absolute top-[50px] left-0 w-full bg-[#FFFDF2] text-[#043D12] p-2 z-10 text-sm">
+                    <p className="absolute top-[50px] left-0 w-full bg-[#FEFEFF] text-[#003087] p-2 z-10 text-sm">
                       No categories available.
                     </p>
                   ) : null}
@@ -945,8 +945,8 @@ const EditProfile = () => {
                     onClick={() => handleEditClick("category")}
                     className={`rounded-[11px] text-[14px] px-4 py-2 shadow-lg flex items-center justify-between gap-2 border-[1px] border-[#6A7368] transition-transform ${
                       buttonActive.category
-                        ? "scale-95 bg-[#043D12] text-white"
-                        : "hover:bg-[#043D12] hover:text-white"
+                        ? "scale-95 bg-[#003087] text-white"
+                        : "hover:bg-[#003087] hover:text-white"
                     }`}
                   >
                     <FiEdit3 className="text-[18px]" />
@@ -954,7 +954,7 @@ const EditProfile = () => {
                   </button>
                 </div>
               </div>
-              <div className="text-[#6A7368] flex flex-col gap-2">
+              <div className="text-[#003087] flex flex-col gap-2">
                 <label className="text-sm">Keywords</label>
                 <div className="flex justify-between gap-4">
                   <input
@@ -976,8 +976,8 @@ const EditProfile = () => {
                     onClick={() => handleEditClick("keyword")}
                     className={`rounded-[11px] text-[14px] px-4 py-2 shadow-lg flex items-center justify-between gap-2 border-[1px] border-[#6A7368] transition-transform ${
                       buttonActive.keyword
-                        ? "scale-95 bg-[#043D12] text-white"
-                        : "hover:bg-[#043D12] hover:text-white"
+                        ? "scale-95 bg-[#003087] text-white"
+                        : "hover:bg-[#003087] hover:text-white"
                     }`}
                   >
                     <FiEdit3 className="text-[18px]" />
@@ -985,7 +985,7 @@ const EditProfile = () => {
                   </button>
                 </div>
               </div>
-              <div className="text-[#6A7368] flex flex-col gap-2">
+              <div className="text-[#003087] flex flex-col gap-2">
                 <label className="text-sm">Location </label>
                 <div className="flex justify-between gap-4">
                   <input
@@ -1007,8 +1007,8 @@ const EditProfile = () => {
                     onClick={() => handleEditClick("location")}
                     className={`rounded-[11px] text-[14px] px-4 py-2 shadow-lg flex items-center justify-between gap-2 border-[1px] border-[#6A7368] transition-transform ${
                       buttonActive.location
-                        ? "scale-95 bg-[#043D12] text-white"
-                        : "hover:bg-[#043D12] hover:text-white"
+                        ? "scale-95 bg-[#003087] text-white"
+                        : "hover:bg-[#003087] hover:text-white"
                     }`}
                   >
                     <FiEdit3 className="text-[18px]" />
@@ -1016,7 +1016,7 @@ const EditProfile = () => {
                   </button>
                 </div>
               </div>
-              <div className="text-[#6A7368] flex flex-col gap-2">
+              <div className="text-[#003087] flex flex-col gap-2">
                 <label className="text-sm">Contact Number</label>
                 <div className="flex justify-between gap-4">
                   <input
@@ -1038,8 +1038,8 @@ const EditProfile = () => {
                     onClick={() => handleEditClick("contactNo")}
                     className={`rounded-[11px] text-[14px] px-4 py-2 shadow-lg flex items-center justify-between gap-2 border-[1px] border-[#6A7368] transition-transform ${
                       buttonActive.contactNo
-                        ? "scale-95 bg-[#043D12] text-white"
-                        : "hover:bg-[#043D12] hover:text-white"
+                        ? "scale-95 bg-[#003087] text-white"
+                        : "hover:bg-[#003087] hover:text-white"
                     }`}
                   >
                     <FiEdit3 className="text-[18px]" />
@@ -1047,7 +1047,7 @@ const EditProfile = () => {
                   </button>
                 </div>
               </div>
-              <div className="text-[#6A7368] flex flex-col gap-2">
+              <div className="text-[#003087] flex flex-col gap-2">
                 <label className="text-sm">Description</label>
                 <div className="flex justify-between gap-4">
                   <textarea
@@ -1068,8 +1068,8 @@ const EditProfile = () => {
                     onClick={() => handleEditClick("description")}
                     className={`rounded-[11px] text-[14px] px-4 py-2 shadow-lg flex items-center justify-between gap-2 border-[1px] border-[#6A7368] transition-transform ${
                       buttonActive.description
-                        ? "scale-95 bg-[#043D12] text-white"
-                        : "hover:bg-[#043D12] hover:text-white"
+                        ? "scale-95 bg-[#003087] text-white"
+                        : "hover:bg-[#003087] hover:text-white"
                     }`}
                   >
                     <FiEdit3 className="text-[18px]" />
@@ -1085,8 +1085,8 @@ const EditProfile = () => {
                   onClick={() => handleDiscardChanges("business")}
                   className={`border-[1px] border-[#6A7368] rounded-[11px] text-[12px] sm:text-[15px] px-4 sm:px-8 py-2 sm:py-3 shadow-lg transition-transform ${
                     buttonActive.businessSubmit
-                      ? "text-[#6A7368] hover:bg-gray-200"
-                      : "bg-[#043D12] text-white hover:bg-[#032b0e]"
+                      ? "text-[#003087] hover:bg-gray-200"
+                      : "bg-[#003087] text-white hover:bg-[#032b0e]"
                   }`}
                 >
                   Discard Changes
@@ -1095,8 +1095,8 @@ const EditProfile = () => {
                   type="submit"
                   className={`border-[1px] border-[#6A7368] rounded-[11px] text-[12px] sm:text-[15px] px-4 sm:px-8 py-2 sm:py-3 shadow-lg transition-transform flex items-center justify-center gap-2 ${
                     buttonActive.businessSubmit
-                      ? "scale-95 bg-[#043D12] text-white"
-                      : "text-[#6A7368] hover:bg-[#043D12] hover:text-white"
+                      ? "scale-95 bg-[#003087] text-white"
+                      : "text-[#003087] hover:bg-[#003087] hover:text-white"
                   }`}
                   disabled={buttonActive.businessSubmit}
                 >

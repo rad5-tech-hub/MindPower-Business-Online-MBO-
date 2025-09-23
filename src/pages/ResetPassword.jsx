@@ -64,9 +64,9 @@ const ResetPassword = () => {
     <div>
       <ToastContainer />
       <div className="w-full h-screen flex justify-center lg:grid grid-cols-2">
-        <div className="max-lg:hidden w-full h-full flex justify-center items-center bg-[url('/Group2.svg')] bg-cover bg-center bg-green-800">
+        <div className="max-lg:hidden w-full h-full flex justify-center items-center bg-[url('/Group2.svg')] bg-cover bg-center bg-[#003087]">
           <div className="w-full h-[90%] flex flex-col items-center">
-            <div className="w-[90%] text-[#FFFDF2] mt-12">
+            <div className="w-[90%] text-[#FEFEFF] mt-12">
               <Link to="/" className="lg:text-[50px] text-[32px] font-medium">
                 Welcome to <br /> MBO
               </Link>
@@ -77,7 +77,7 @@ const ResetPassword = () => {
           </div>
         </div>
 
-        <div className="relative max-lg:w-full flex flex-col items-center lg:justify-center bg-[#FFFDF2] max-md:bg-[url('/bg-login.svg')] bg-cover bg-center">
+        <div className="relative max-lg:w-full flex flex-col items-center lg:justify-center bg-[#FEFEFF] max-md:bg-[url('/bg-login.svg')] bg-cover bg-center">
           <div className="w-[80%] h-fit max-lg:mt-16">
             <Link
               to="/"
@@ -85,7 +85,7 @@ const ResetPassword = () => {
             >
               MBO
             </Link>
-            <h4 className="lg:text-[32px] text-[20px] font-medium text-[#043D12] flex items-center gap-2">
+            <h4 className="lg:text-[32px] text-[20px] font-medium text-[#003087] flex items-center gap-2">
               Reset your password <Hand />
             </h4>
 
@@ -94,38 +94,38 @@ const ResetPassword = () => {
               className="max-lg:w-full flex flex-col gap-8 mt-8 max-lg:items-center"
             >
               <div className="max-lg:w-full border-[1px] rounded-[27px] px-8 border-[#363636] flex items-center gap-2 lg:h-[64px] h-[51px]">
-                <CiLock className="text-[#6A7368]" />
+                <CiLock className="text-[#003087]" />
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter New Password"
-                  className="bg-transparent w-full h-full border-none focus:outline-none text-[#043D12]"
+                  className="bg-transparent w-full h-full border-none focus:outline-none text-[#003087]"
                   required
                 />
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
-                  className="text-[#6A7368] ml-4 focus:outline-none"
+                  className="text-[#003087] ml-4 focus:outline-none"
                 >
                   {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
                 </button>
               </div>
 
               <div className="max-lg:w-full border-[1px] rounded-[27px] px-8 border-[#363636] flex items-center gap-2 lg:h-[64px] h-[51px]">
-                <CiLock className="text-[#6A7368]" />
+                <CiLock className="text-[#003087]" />
                 <input
                   type={showPassword ? "text" : "password"}
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="Confirm New Password"
-                  className="bg-transparent w-full h-full border-none focus:outline-none text-[#043D12]"
+                  className="bg-transparent w-full h-full border-none focus:outline-none text-[#003087]"
                   required
                 />
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
-                  className="text-[#6A7368] ml-4 focus:outline-none"
+                  className="text-[#003087] ml-4 focus:outline-none"
                 >
                   {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
                 </button>
@@ -134,7 +134,7 @@ const ResetPassword = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className={`mt-8 w-full text-[#FFFDF2] bg-[#043D12] hover:bg-[#043D12]/75 shadow-lg rounded-[27px] px-8 flex justify-center items-center lg:h-[64px] h-[51px] ${
+                className={`mt-8 w-full text-[#FEFEFF] bg-[#003087] hover:bg-[#003087]/75 shadow-lg rounded-[27px] px-8 flex justify-center items-center lg:h-[64px] h-[51px] ${
                   isLoading ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >

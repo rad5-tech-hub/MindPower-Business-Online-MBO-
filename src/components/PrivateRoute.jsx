@@ -37,11 +37,11 @@ const PrivateRoute = ({ children }) => {
   // Show loading state while rehydrating
   if (!isRehydrated) {
     return (
-      <div className="flex justify-center items-center h-screen bg-[#FFFDF2]">
+      <div className="flex justify-center items-center h-screen bg-[#FEFEFF]">
         <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-200"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-400"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-200"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-400"></div>
         </div>
       </div>
     );

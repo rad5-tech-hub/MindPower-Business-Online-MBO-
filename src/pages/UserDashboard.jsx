@@ -308,7 +308,7 @@ const UserDashboard = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="logo text-[32px] text-[#043D12] mb-6"
+          className="logo text-[32px] text-[#003087] mb-6"
         >
           MBO
         </motion.strong>
@@ -327,8 +327,8 @@ const UserDashboard = () => {
                   onClick={handleNavLinkClick}
                   className={`text-[15px] flex items-center gap-4 px-6 py-2 rounded-[11px] transition-all duration-300 relative overflow-hidden ${
                     location.pathname === item.to
-                      ? "bg-[#043D12] text-white shadow-lg"
-                      : "text-[#043D12] hover:bg-gray-200"
+                      ? "bg-[#003087] text-white shadow-lg"
+                      : "text-[#003087] hover:bg-gray-200"
                   }`}
                 >
                   {item.icon}
@@ -363,13 +363,13 @@ const UserDashboard = () => {
                   transition={{ duration: 0.3 }}
                   onError={(e) => (e.target.src = BusinessImg)}
                 />
-                <figcaption className="text-center text-[#6A7368]">
+                <figcaption className="text-center text-[#003087]">
                   <h3 className="text-[12px]">{profileData.businessName}</h3>
                   <p className="text-[8px]">{profileData.category}</p>
                 </figcaption>
               </figure>
               <motion.button
-                className="relative text-white text-[14px] rounded-[14px] bg-[#043D12] py-3 px-4 shadow-lg overflow-hidden group"
+                className="relative text-white text-[14px] rounded-[14px] bg-[#003087] py-3 px-4 shadow-lg overflow-hidden group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleShareClick}
@@ -440,13 +440,13 @@ const UserDashboard = () => {
                       whileTap={{ scale: 0.9 }}
                       onClick={() => handleShareAction("copy")}
                       className={`p-1 ${
-                        copied ? "text-green-500" : "text-[#6A7368]"
+                        copied ? "text-green-500" : "text-[#003087]"
                       }`}
                       title={copied ? "Copied!" : "Copy Link"}
                     >
                       <FaCopy size={20} />
                       {copied && (
-                        <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-green-500 text-white text-xs rounded px-2 py-1">
+                        <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#003087] text-white text-xs rounded px-2 py-1">
                           Copied!
                         </span>
                       )}
@@ -466,8 +466,8 @@ const UserDashboard = () => {
                 onClick={handleNavLinkClick}
                 className={`text-[15px] flex items-center gap-4 px-6 py-2 rounded-[11px] transition-all duration-300 relative overflow-hidden ${
                   location.pathname === helpItem.to
-                    ? "bg-[#043D12] text-white shadow-lg"
-                    : "text-[#043D12] hover:bg-gray-200"
+                    ? "bg-[#003087] text-white shadow-lg"
+                    : "text-[#003087] hover:bg-gray-200"
                 }`}
               >
                 {helpItem.icon}
@@ -491,7 +491,7 @@ const UserDashboard = () => {
             >
               <button
                 onClick={handleLogout}
-                className="text-[15px] flex items-center gap-4 px-6 py-2 rounded-[11px] transition-all duration-300 relative overflow-hidden text-[#043D12] hover:bg-gray-200 w-full text-left"
+                className="text-[15px] flex items-center gap-4 px-6 py-2 rounded-[11px] transition-all duration-300 relative overflow-hidden text-[#003087] hover:bg-gray-200 w-full text-left"
               >
                 <IoIosLogOut className="text-[25px]" />
                 <motion.span
@@ -523,7 +523,7 @@ const UserDashboard = () => {
           >
             <CgMenuLeftAlt
               onClick={toggleSidebar}
-              className="text-[#043D12] text-[25px] hover:scale-110 transition-transform"
+              className="text-[#003087] text-[25px] hover:scale-110 transition-transform"
             />
           </motion.div>
         )}
@@ -541,11 +541,11 @@ const UserDashboard = () => {
           <div className="bg-white p-8 rounded-2xl w-[32rem] max-w-[90%] shadow-2xl transform transition-all duration-300 scale-100 hover:scale-105">
             <h2
               id="subscription-modal-title"
-              className="text-2xl font-semibold text-[#043D12] mb-4"
+              className="text-2xl font-semibold text-[#003087] mb-4"
             >
               Heads up!
             </h2>
-            <p className="text-[#6A7368] mb-6">
+            <p className="text-[#003087] mb-6">
               You cannot share your profile until you subscribe.
               <br />
               Want to share your profile with others? Unlock it with a
@@ -553,14 +553,14 @@ const UserDashboard = () => {
             </p>
             <div className="flex justify-end gap-3">
               <button
-                className="px-6 py-2.5 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200 text-[#6A7368] font-medium cursor-pointer"
+                className="px-6 py-2.5 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200 text-[#003087] font-medium cursor-pointer"
                 onClick={() => setShowShareSubscriptionModal(false)}
               >
                 Close
               </button>
               <a
                 href="/subscribe"
-                className="px-6 py-2.5 bg-[#043D12] text-white rounded-lg hover:bg-[#03280E] transition-colors duration-200 font-medium cursor-pointer"
+                className="px-6 py-2.5 bg-[#003087] text-white rounded-lg hover:bg-[#03280E] transition-colors duration-200 font-medium cursor-pointer"
               >
                 Subscribe Now
               </a>

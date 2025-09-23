@@ -59,9 +59,9 @@ const ForgottenPassword = () => {
         className="z-50"
       />
       <div className="w-full h-screen flex justify-center lg:grid grid-cols-2">
-        <div className="max-lg:hidden w-full h-full flex justify-center items-center bg-[url('/Group2.svg')] bg-cover bg-center bg-green-800">
+        <div className="max-lg:hidden w-full h-full flex justify-center items-center bg-[url('/Group2.svg')] bg-cover bg-center bg-[#003087]">
           <div className="w-full h-[90%] flex flex-col items-center">
-            <div className="w-[90%] text-[#FFFDF2] mt-12">
+            <div className="w-[90%] text-[#FEFEFF] mt-12">
               <Link to="/" className="lg:text-[50px] text-[32px] font-medium">
                 Welcome to <br /> MBO
               </Link>
@@ -72,13 +72,13 @@ const ForgottenPassword = () => {
             </div>
           </div>
         </div>
-        <div className="relative max-lg:w-full flex flex-col items-center lg:justify-center bg-[#FFFDF2] max-md:bg-[url('/bg-login.svg')] bg-cover bg-center">
+        <div className="relative max-lg:w-full flex flex-col items-center lg:justify-center bg-[#FEFEFF] max-md:bg-[url('/bg-login.svg')] bg-cover bg-center">
           <div className="w-[80%] h-fit max-lg:mt-16">
             <Link
               to="/"
               className="lg:text-[50px] text-[32px] font-bold text-[#363636] absolute top-4 left-4"
             >
-              <IoArrowBackCircle className="text-[#043D12] text-[40px]" />
+              <IoArrowBackCircle className="text-[#003087] text-[40px]" />
             </Link>
             <Link
               to="/"
@@ -86,7 +86,7 @@ const ForgottenPassword = () => {
             >
               MBO
             </Link>
-            <h4 className="lg:text-[32px] text-[20px] font-medium text-[#043D12] flex items-center gap-2">
+            <h4 className="lg:text-[32px] text-[20px] font-medium text-[#003087] flex items-center gap-2">
               Forgot Password <Hand />
             </h4>
             <form
@@ -94,20 +94,20 @@ const ForgottenPassword = () => {
               className="max-lg:w-full flex flex-col gap-8 mt-8 max-lg:items-center"
             >
               <div className="max-lg:w-full email border-[1px] rounded-[27px] px-8 border-[#363636] flex items-center gap-2 lg:h-[64px] h-[51px]">
-                <FaRegEnvelope className="text-[#6A7368]" />
+                <FaRegEnvelope className="text-[#003087]" />
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter Email"
-                  className="bg-transparent w-full h-full border-none focus:outline-none focus:border-transparent text-[#043D12]"
+                  className="bg-transparent w-full h-full border-none focus:outline-none focus:border-transparent text-[#003087]"
                   required
                 />
               </div>
               <button
                 type="submit"
                 disabled={isLoading}
-                className="mt-8 w-full text-[#FFFDF2] password bg-[#043D12] hover:bg-[#043D12]/75 shadow-lg rounded-[27px] px-8 flex justify-center items-center lg:h-[64px] h-[51px]"
+                className="mt-8 w-full text-[#FEFEFF] password bg-[#003087] hover:bg-[#003087]/75 shadow-lg rounded-[27px] px-8 flex justify-center items-center lg:h-[64px] h-[51px]"
               >
                 {isLoading ? "Processing..." : "Continue"}
               </button>

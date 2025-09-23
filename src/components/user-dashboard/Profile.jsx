@@ -673,9 +673,9 @@ const Profile = () => {
     return (
       <div className="flex justify-center items-center h-screen bg-white">
         <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-200"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-400"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-200"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-400"></div>
         </div>
       </div>
     );
@@ -707,11 +707,11 @@ const Profile = () => {
         pauseOnHover
       />
 
-      <header className="h-[12vh] max-sm:h-[8vh] p-4 sm:p-8 text-[#6A7368] flex justify-between items-center gap-2">
+      <header className="h-[12vh] max-sm:h-[8vh] p-4 sm:p-8 text-[#003087] flex justify-between items-center gap-2">
         <strong className="text-[16px]">Dashboard</strong>
         <div className="flex items-center gap-2 sm:gap-4 px-2 sm:px-4 mr-8">
           <Link to="/user-dashboard/notification">
-            <IoIosNotificationsOutline className="hidden text-[24px] sm:text-[30px] text-[#6A7368] hover:text-[#043D12] transition-colors" />
+            <IoIosNotificationsOutline className="hidden text-[24px] sm:text-[30px] text-[#003087] hover:text-[#003087] transition-colors" />
           </Link>
           <Link to="/user-dashboard/profile">
             <motion.figure
@@ -728,9 +728,9 @@ const Profile = () => {
                   onError={(e) => (e.target.src = BusinessImg)}
                 />
               ) : (
-                <CiUser className="text-[24px] sm:text-[32px] text-[#043D12] bg-gray-100 rounded-full p-1" />
+                <CiUser className="text-[24px] sm:text-[32px] text-[#003087] bg-gray-100 rounded-full p-1" />
               )}
-              <figcaption className="ml-2 text-[#6A7368] hidden sm:block">
+              <figcaption className="ml-2 text-[#003087] hidden sm:block">
                 <h3 className="text-[12px] font-semibold">
                   {profileData?.businessName || defaultProfileData.businessName}
                 </h3>
@@ -744,7 +744,7 @@ const Profile = () => {
       </header>
 
       <section className="welcome flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 px-2 sm:px-0">
-        <div className="text-[#6A7368] text-center sm:text-left">
+        <div className="text-[#003087] text-center sm:text-left">
           <h2 className="text-[16px] sm:text-[20px]">
             Welcome back,{" "}
             {profileData?.businessName || defaultProfileData.businessName}
@@ -778,15 +778,15 @@ const Profile = () => {
               }
             >
               <motion.div
-                className="h-full bg-[#043D12]"
+                className="h-full bg-[#003087]"
                 initial={{ width: 0 }}
                 animate={{ width: `${profileProgress}%` }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
               />
             </div>
-            <p className="text-[10px] sm:text-[12px] text-[#6A7368]">
+            <p className="text-[10px] sm:text-[12px] text-[#003087]">
               {isProfileComplete ? (
-                <span className="text-[#043D12] font-semibold">
+                <span className="text-[#003087] font-semibold">
                   Profile Completed ⚡
                 </span>
               ) : (
@@ -799,7 +799,7 @@ const Profile = () => {
               onClick={() =>
                 setIsProfileVisibleDropdownOpen(!isProfileVisibleDropdownOpen)
               }
-              className="flex items-center gap-2 px-3 py-2 bg-[#F5F7F5] text-[#043D12] rounded-lg shadow-md hover:bg-[#E8ECE8] transition-all text-[12px] sm:text-[14px]"
+              className="flex items-center gap-2 px-3 py-2 bg-[#F5F7F5] text-[#003087] rounded-lg shadow-md hover:bg-[#E8ECE8] transition-all text-[12px] sm:text-[14px]"
             >
               {isVisible ? (
                 <FiEye className="text-[16px]" />
@@ -815,13 +815,13 @@ const Profile = () => {
                   <>
                     <button
                       onClick={() => toggleVisibility("hide")}
-                      className="w-full text-left px-4 py-2 text-[#043D12] hover:bg-[#E8ECE8] transition-all text-[12px] sm:text-[14px]"
+                      className="w-full text-left px-4 py-2 text-[#003087] hover:bg-[#E8ECE8] transition-all text-[12px] sm:text-[14px]"
                     >
                       Hide Profile
                     </button>
                     <button
                       onClick={handleShareProfile}
-                      className="w-full text-left px-4 py-2 text-[#043D12] hover:bg-[#E8ECE8] transition-all text-[12px] sm:text-[14px]"
+                      className="w-full text-left px-4 py-2 text-[#003087] hover:bg-[#E8ECE8] transition-all text-[12px] sm:text-[14px]"
                     >
                       Preview Profile
                     </button>
@@ -829,7 +829,7 @@ const Profile = () => {
                 ) : (
                   <button
                     onClick={() => toggleVisibility("restore")}
-                    className="w-full text-left px-4 py-2 text-[#043D12] hover:bg-[#E8ECE8] transition-all text-[12px] sm:text-[14px]"
+                    className="w-full text-left px-4 py-2 text-[#003087] hover:bg-[#E8ECE8] transition-all text-[12px] sm:text-[14px]"
                   >
                     Make Profile Visible
                   </button>
@@ -860,11 +860,11 @@ const Profile = () => {
           <div className="bg-white p-8 rounded-2xl w-[32rem] max-w-[90%] shadow-2xl transform transition-all duration-300 scale-100 hover:scale-105">
             <h2
               id="subscription-modal-title"
-              className="text-2xl font-semibold text-[#043D12] mb-4"
+              className="text-2xl font-semibold text-[#003087] mb-4"
             >
               Heads up!
             </h2>
-            <p className="text-[#6A7368] mb-6">
+            <p className="text-[#003087] mb-6">
               You cannot preview your profile until you subscribe.
               <br />
               Want to preview and share your profile with others? Unlock it with
@@ -872,14 +872,14 @@ const Profile = () => {
             </p>
             <div className="flex justify-end gap-3">
               <button
-                className="px-6 py-2.5 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200 text-[#6A7368] font-medium cursor-pointer"
+                className="px-6 py-2.5 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200 text-[#003087] font-medium cursor-pointer"
                 onClick={() => setShowShareSubscriptionModal(false)}
               >
                 Close
               </button>
               <a
                 href="/subscribe" // Adjust if your subscription route is different
-                className="px-6 py-2.5 bg-[#043D12] text-white rounded-lg hover:bg-[#03280E] transition-colors duration-200 font-medium cursor-pointer"
+                className="px-6 py-2.5 bg-[#003087] text-white rounded-lg hover:bg-[#03280E] transition-colors duration-200 font-medium cursor-pointer"
               >
                 Subscribe Now
               </a>
@@ -894,10 +894,10 @@ const Profile = () => {
             <div
               key={key}
               onClick={() => handleMetricChange(key)}
-              className={`p-4 sm:p-6 text-[#6A7368] rounded-[11px] flex flex-col gap-2 sm:gap-4 text-center cursor-pointer shadow-md transition-all ${
+              className={`p-4 sm:p-6 text-[#003087] rounded-[11px] flex flex-col gap-2 sm:gap-4 text-center cursor-pointer shadow-md transition-all ${
                 metric === key
-                  ? "bg-[#043D12] text-[#FFFDF2]"
-                  : "bg-[#F5F7F5] hover:bg-[#043D12] hover:text-[#FFFDF2]"
+                  ? "bg-[#003087] text-[#FEFEFF]"
+                  : "bg-[#F5F7F5] hover:bg-[#003087] hover:text-[#FEFEFF]"
               } ${!isVisible ? "opacity-50" : ""}`}
             >
               <h5 className="text-center text-[12px] sm:text-[14px] font-semibold">
@@ -915,7 +915,7 @@ const Profile = () => {
 
         <div className="mt-8 border-[1px] border-[#6A7368] rounded-[20px] sm:rounded-[30px] shadow-lg p-4 sm:p-6">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <h3 className="text-[14px] sm:text-[16px] text-[#6A7368]">
+            <h3 className="text-[14px] sm:text-[16px] text-[#003087]">
               {METRICS.find((m) => m.key === metric)?.title} Performance
             </h3>
             <div className="relative border-[1px] rounded-lg dropdown-container">
@@ -923,7 +923,7 @@ const Profile = () => {
                 className="flex items-center gap-2 sm:gap-4 cursor-pointer rounded-lg px-2 py-1"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
-                <span className="text-[12px] sm:text-[14px] text-[#6A7368]">
+                <span className="text-[12px] sm:text-[14px] text-[#003087]">
                   {TIME_RANGES[timeRange].label}
                 </span>
                 <RiArrowDropDownLine className="text-[16px] sm:text-[20px]" />

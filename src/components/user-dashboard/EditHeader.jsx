@@ -90,13 +90,13 @@ const EditHeader = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="h-[10vh] p-8 text-[#6A7368] flex justify-between items-center w-full z-0 border-b-[1px] border-gray-200 bg-white shadow">
+        <div className="h-[10vh] p-8 text-[#003087] flex justify-between items-center w-full z-0 border-b-[1px] border-gray-200 bg-white shadow">
           <strong className="lg:text-[16px] text-[12px] pl-4 xl:pl-6">
             Edit Profile
           </strong>
           <div className="flex items-center md:gap-4 pr-8">
             <Link to="/user-dashboard/notification">
-              <IoIosNotificationsOutline className="hidden text-[30px] text-[#6A7368] hover:text-[#043D12] transition-colors" />
+              <IoIosNotificationsOutline className="hidden text-[30px] text-[#003087] hover:text-[#003087] transition-colors" />
             </Link>
             <Link to="/user-dashboard/profile">
               <motion.figure
@@ -117,9 +117,9 @@ const EditHeader = () => {
                     onError={(e) => (e.target.src = BusinessImg)}
                   />
                 ) : (
-                  <CiUser className="text-[32px] text-[#043D12] bg-gray-100 rounded-full p-1" />
+                  <CiUser className="text-[32px] text-[#003087] bg-gray-100 rounded-full p-1" />
                 )}
-                <figcaption className="ml-2 text-[#6A7368] max-md:hidden">
+                <figcaption className="ml-2 text-[#003087] max-md:hidden">
                   <h3 className="text-[12px] font-semibold">
                     {profileData.businessName}
                   </h3>
@@ -145,8 +145,8 @@ const EditHeader = () => {
                 className={`text-[15px] flex items-center gap-4 px-6 py-2 rounded-[11px] transition-all duration-300 
                 ${
                   location.pathname === to
-                    ? "bg-[#043D12] text-white shadow-lg scale-105"
-                    : "text-[#043D12] hover:bg-gray-200"
+                    ? "bg-[#003087] text-white shadow-lg scale-105"
+                    : "text-[#003087] hover:bg-gray-200"
                 }`}
               >
                 <span className="text-[25px]">{icon}</span>

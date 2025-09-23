@@ -114,7 +114,7 @@ const AdminDashboard = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="logo text-[32px] text-[#043D12]"
+            className="logo text-[32px] text-[#003087]"
           >
             MBO
           </motion.strong>
@@ -136,8 +136,8 @@ const AdminDashboard = () => {
                         onClick={toggleManageDropdown}
                         className={`text-[15px] flex items-center gap-4 px-6 py-2 rounded-[11px] transition-all duration-300 w-full text-left ${
                           location.pathname.startsWith("/admin/manage-")
-                            ? "bg-[#043D121A] text-[#043D12] shadow-lg"
-                            : "text-[#6A7368] hover:bg-gray-200"
+                            ? "bg-[#043D121A] text-[#003087] shadow-lg"
+                            : "text-[#003087] hover:bg-gray-200"
                         }`}
                       >
                         {item.icon}
@@ -155,8 +155,8 @@ const AdminDashboard = () => {
                               onClick={handleNavClick} // Added handler here
                               className={`text-[14px] flex items-center gap-2 px-4 py-1 rounded-[8px] transition-all duration-300 ${
                                 location.pathname === subItem.to
-                                  ? "bg-[#043D121A] text-[#043D12]"
-                                  : "text-[#6A7368] hover:bg-gray-100"
+                                  ? "bg-[#043D121A] text-[#003087]"
+                                  : "text-[#003087] hover:bg-gray-100"
                               }`}
                             >
                               {subItem.label}
@@ -171,8 +171,8 @@ const AdminDashboard = () => {
                       onClick={handleNavClick} // Added handler here
                       className={`text-[15px] flex items-center gap-4 px-6 py-2 rounded-[11px] transition-all duration-300 relative overflow-hidden ${
                         location.pathname === item.to
-                          ? "bg-[#043D121A] text-[#043D12] shadow-lg"
-                          : "text-[#6A7368] hover:bg-gray-200"
+                          ? "bg-[#043D121A] text-[#003087] shadow-lg"
+                          : "text-[#003087] hover:bg-gray-200"
                       }`}
                     >
                       {item.icon}
@@ -215,8 +215,8 @@ const AdminDashboard = () => {
                     }}
                     className={`text-[14px] flex items-center gap-4 px-6 py-2 rounded-[11px] transition-all duration-300 relative overflow-hidden ${
                       location.pathname.startsWith(item.to)
-                        ? "bg-[#C8E6C9] text-[#043D12] shadow-lg"
-                        : "text-[#6A7368] hover:bg-gray-200"
+                        ? "bg-[#C8E6C9] text-[#003087] shadow-lg"
+                        : "text-[#003087] hover:bg-gray-200"
                     }`}
                   >
                     {item.icon}
@@ -254,7 +254,7 @@ const AdminDashboard = () => {
           >
             <CgMenuLeftAlt
               onClick={toggleSidebar}
-              className="text-[#043D12] text-[25px] hover:scale-110 transition-transform"
+              className="text-[#003087] text-[25px] hover:scale-110 transition-transform"
             />
           </motion.div>
         )}

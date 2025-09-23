@@ -19,15 +19,15 @@ const ProfileProgressBar = ({ progress, isComplete }) => {
         title={!isComplete ? "Complete your profile" : "Profile Fully Synced"}
       >
         <motion.div
-          className="h-full bg-[#043D12]"
+          className="h-full bg-[#003087]"
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         />
       </div>
-      <p className="text-[10px] sm:text-[12px] text-[#6A7368]">
+      <p className="text-[10px] sm:text-[12px] text-[#003087]">
         {isComplete ? (
-          <span className="text-[#043D12] font-semibold">
+          <span className="text-[#003087] font-semibold">
             Profile Fully Synced ⚡
           </span>
         ) : (

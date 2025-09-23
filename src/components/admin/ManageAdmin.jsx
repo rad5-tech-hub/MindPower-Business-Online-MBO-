@@ -394,9 +394,9 @@ const ManageAdmin = () => {
     return (
       <div className="flex justify-center items-center h-screen bg-white">
         <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-200"></div>
-          <div className="w-3 h-3 bg-[#043D12] rounded-full animate-bounce delay-400"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-200"></div>
+          <div className="w-3 h-3 bg-[#003087] rounded-full animate-bounce delay-400"></div>
         </div>
       </div>
     );
@@ -426,7 +426,7 @@ const ManageAdmin = () => {
       />
 
       {/* Header */}
-      <div className="text-[#6A7368] flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div className="text-[#003087] flex flex-col sm:flex-row justify-between items-center gap-4">
         <div className="w-full sm:w-auto flex flex-col sm:flex-row items-center gap-4">
           <div className="border-[1px] border-[#6A7368] flex items-center gap-2 px-3 py-2 rounded-[11px] shadow-lg w-full sm:w-[350px]">
             <BiSearch className="text-lg" />
@@ -442,7 +442,7 @@ const ManageAdmin = () => {
         </div>
         <div className="flex items-center gap-3 sm:gap-4 px-2 relative">
           <Link to="/admin/manage-notifications">
-            <IoIosNotificationsOutline className="text-2xl sm:text-[30px] text-[#6A7368] hover:text-[#043D12] transition-colors" />
+            <IoIosNotificationsOutline className="text-2xl sm:text-[30px] text-[#003087] hover:text-[#003087] transition-colors" />
           </Link>
           <div className="relative">
             <motion.figure
@@ -452,8 +452,8 @@ const ManageAdmin = () => {
               transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
               onClick={toggleResetButton}
             >
-              <CiUser className="text-2xl text-[#043D12] bg-gray-100 rounded-full p-1" />
-              <figcaption className="ml-2 text-[#6A7368] hidden sm:block">
+              <CiUser className="text-2xl text-[#003087] bg-gray-100 rounded-full p-1" />
+              <figcaption className="ml-2 text-[#003087] hidden sm:block">
                 <h3 className="text-xs sm:text-[12px] font-semibold">
                   {profileData.firstname} {profileData.lastname}
                 </h3>
@@ -465,7 +465,7 @@ const ManageAdmin = () => {
                 className="absolute right-0 mt-2 w-40 sm:w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50"
               >
                 <button
-                  className="w-full text-left px-3 py-2 text-[#6A7368] flex items-center gap-2 hover:bg-gray-100 text-sm"
+                  className="w-full text-left px-3 py-2 text-[#003087] flex items-center gap-2 hover:bg-gray-100 text-sm"
                   onClick={handleResetPassword}
                 >
                   <FiLock /> Change Password
@@ -477,11 +477,11 @@ const ManageAdmin = () => {
       </div>
 
       {/* Main Content */}
-      <main className="text-[#6A7368] container">
+      <main className="text-[#003087] container">
         <div className="intro flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
           <p className="text-lg sm:text-[20px] font-semibold">Admin</p>
           <button
-            className="flex items-center gap-2 border-[1px] border-[#6A7368] px-4 py-2 rounded-[11px] bg-white hover:bg-[#043D12] hover:text-[#FFFDF2] transition-colors shadow-md text-sm sm:text-base"
+            className="flex items-center gap-2 border-[1px] border-[#6A7368] px-4 py-2 rounded-[11px] bg-white hover:bg-[#003087] hover:text-[#FEFEFF] transition-colors shadow-md text-sm sm:text-base"
             onClick={openModal}
           >
             <BiPlus />
@@ -523,7 +523,7 @@ const ManageAdmin = () => {
                         className="relative"
                       >
                         <BsThreeDots
-                          className="text-[18px] cursor-pointer hover:text-[#043D12] transition-colors"
+                          className="text-[18px] cursor-pointer hover:text-[#003087] transition-colors"
                           onClick={() => toggleMenu(index)}
                         />
                         {activeMenuIndex === index && (
@@ -573,7 +573,7 @@ const ManageAdmin = () => {
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-semibold">{`${admin.firstname} ${admin.lastname}`}</span>
                   <BsThreeDots
-                    className="text-lg cursor-pointer hover:text-[#043D12]"
+                    className="text-lg cursor-pointer hover:text-[#003087]"
                     onClick={() => toggleMenu(index)}
                   />
                 </div>
@@ -610,7 +610,7 @@ const ManageAdmin = () => {
             <button
               onClick={() => paginate(currentPage - 1)}
               disabled={currentPage === 1}
-              className="px-3 py-1 bg-[#043D12] text-[#FFFDF2] rounded-[11px] disabled:bg-gray-300"
+              className="px-3 py-1 bg-[#003087] text-[#FEFEFF] rounded-[11px] disabled:bg-gray-300"
             >
               Previous
             </button>
@@ -620,8 +620,8 @@ const ManageAdmin = () => {
                 onClick={() => paginate(page)}
                 className={`px-3 py-1 rounded-[11px] ${
                   currentPage === page
-                    ? "bg-[#043D12] text-[#FFFDF2]"
-                    : "bg-white text-[#6A7368] border border-[#6A7368]"
+                    ? "bg-[#003087] text-[#FEFEFF]"
+                    : "bg-white text-[#003087] border border-[#6A7368]"
                 }`}
               >
                 {page}
@@ -630,7 +630,7 @@ const ManageAdmin = () => {
             <button
               onClick={() => paginate(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className="px-3 py-1 bg-[#043D12] text-[#FFFDF2] rounded-[11px] disabled:bg-gray-300"
+              className="px-3 py-1 bg-[#003087] text-[#FEFEFF] rounded-[11px] disabled:bg-gray-300"
             >
               Next
             </button>
@@ -646,18 +646,18 @@ const ManageAdmin = () => {
             className="bg-white rounded-[11px] shadow-lg w-full max-w-md sm:w-[400px] p-4 sm:p-6 max-h-[90vh] overflow-y-auto"
           >
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg sm:text-[20px] font-semibold text-[#6A7368]">
+              <h2 className="text-lg sm:text-[20px] font-semibold text-[#003087]">
                 New Admin
               </h2>
               <AiOutlineClose
-                className="text-xl sm:text-[20px] text-[#6A7368] cursor-pointer hover:text-[#043D12] transition-colors"
+                className="text-xl sm:text-[20px] text-[#003087] cursor-pointer hover:text-[#003087] transition-colors"
                 onClick={closeModal}
               />
             </div>
             <form onSubmit={handleAddAdmin}>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm sm:text-[14px] text-[#6A7368] mb-1">
+                  <label className="block text-sm sm:text-[14px] text-[#003087] mb-1">
                     First Name
                   </label>
                   <div className="relative">
@@ -670,11 +670,11 @@ const ManageAdmin = () => {
                       className="w-full h-10 sm:h-[42px] px-3 sm:px-4 border-[1px] border-[#6A7368] rounded-[11px] outline-0 bg-transparent text-sm sm:text-base"
                       required
                     />
-                    <FiUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#6A7368]" />
+                    <FiUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#003087]" />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm sm:text-[14px] text-[#6A7368] mb-1">
+                  <label className="block text-sm sm:text-[14px] text-[#003087] mb-1">
                     Last Name
                   </label>
                   <div className="relative">
@@ -687,11 +687,11 @@ const ManageAdmin = () => {
                       className="w-full h-10 sm:h-[42px] px-3 sm:px-4 border-[1px] border-[#6A7368] rounded-[11px] outline-0 bg-transparent text-sm sm:text-base"
                       required
                     />
-                    <FiUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#6A7368]" />
+                    <FiUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#003087]" />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm sm:text-[14px] text-[#6A7368] mb-1">
+                  <label className="block text-sm sm:text-[14px] text-[#003087] mb-1">
                     Email
                   </label>
                   <div className="relative">
@@ -704,11 +704,11 @@ const ManageAdmin = () => {
                       className="w-full h-10 sm:h-[42px] px-3 sm:px-4 border-[1px] border-[#6A7368] rounded-[11px] outline-0 bg-transparent text-sm sm:text-base"
                       required
                     />
-                    <FiMail className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#6A7368]" />
+                    <FiMail className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#003087]" />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm sm:text-[14px] text-[#6A7368] mb-1">
+                  <label className="block text-sm sm:text-[14px] text-[#003087] mb-1">
                     Password
                   </label>
                   <div className="relative">
@@ -721,9 +721,9 @@ const ManageAdmin = () => {
                       className="w-full h-10 sm:h-[42px] px-3 sm:px-4 border-[1px] border-[#6A7368] rounded-[11px] outline-0 bg-transparent text-sm sm:text-base"
                       required
                     />
-                    <FiKey className="absolute right-10 top-1/2 transform -translate-y-1/2 text-[#6A7368]" />
+                    <FiKey className="absolute right-10 top-1/2 transform -translate-y-1/2 text-[#003087]" />
                     <span
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#6A7368]"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#003087]"
                       onClick={() => setShowPassword(!showPassword)}
                     >
                       {showPassword ? <FiEyeOff /> : <FiEye />}
@@ -731,7 +731,7 @@ const ManageAdmin = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm sm:text-[14px] text-[#6A7368] mb-1">
+                  <label className="block text-sm sm:text-[14px] text-[#003087] mb-1">
                     Confirm Password
                   </label>
                   <div className="relative">
@@ -744,9 +744,9 @@ const ManageAdmin = () => {
                       className="w-full h-10 sm:h-[42px] px-3 sm:px-4 border-[1px] border-[#6A7368] rounded-[11px] outline-0 bg-transparent text-sm sm:text-base"
                       required
                     />
-                    <FiKey className="absolute right-10 top-1/2 transform -translate-y-1/2 text-[#6A7368]" />
+                    <FiKey className="absolute right-10 top-1/2 transform -translate-y-1/2 text-[#003087]" />
                     <span
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#6A7368]"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#003087]"
                       onClick={() =>
                         setShowConfirmPassword(!showConfirmPassword)
                       }
@@ -757,7 +757,7 @@ const ManageAdmin = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full mt-4 px-4 py-2 bg-[#043D12] text-[#FFFDF2] rounded-[11px] hover:bg-[#032d0e] transition-colors text-sm sm:text-base"
+                  className="w-full mt-4 px-4 py-2 bg-[#003087] text-[#FEFEFF] rounded-[11px] hover:bg-[#003087] transition-colors text-sm sm:text-base"
                 >
                   Add Admin
                 </button>
@@ -776,7 +776,7 @@ const ManageAdmin = () => {
           >
             <div className="flex justify-end mb-4">
               <AiOutlineClose
-                className="text-xl sm:text-[20px] text-[#6A7368] cursor-pointer hover:text-[#043D12] transition-colors"
+                className="text-xl sm:text-[20px] text-[#003087] cursor-pointer hover:text-[#003087] transition-colors"
                 onClick={() => {
                   setIsDeleteModalOpen(false);
                   setDeleteAdmin(null);
@@ -789,7 +789,7 @@ const ManageAdmin = () => {
               </div>
             </div>
             <div className="text-center mb-4">
-              <p className="text-sm sm:text-[16px] text-[#6A7368]">
+              <p className="text-sm sm:text-[16px] text-[#003087]">
                 Are you sure you want to remove{" "}
                 <span className="font-semibold">
                   {`${deleteAdmin.firstname} ${deleteAdmin.lastname}`}
@@ -799,7 +799,7 @@ const ManageAdmin = () => {
             </div>
             <div className="flex justify-between gap-2">
               <button
-                className="w-full px-4 py-2 bg-gray-200 text-[#6A7368] rounded-[11px] hover:bg-gray-300 transition-colors text-sm sm:text-base"
+                className="w-full px-4 py-2 bg-gray-200 text-[#003087] rounded-[11px] hover:bg-gray-300 transition-colors text-sm sm:text-base"
                 onClick={() => {
                   setIsDeleteModalOpen(false);
                   setDeleteAdmin(null);
@@ -808,7 +808,7 @@ const ManageAdmin = () => {
                 Cancel
               </button>
               <button
-                className="w-full px-4 py-2 bg-red-600 text-[#FFFDF2] rounded-[11px] hover:bg-red-700 transition-colors text-sm sm:text-base"
+                className="w-full px-4 py-2 bg-red-600 text-[#FEFEFF] rounded-[11px] hover:bg-red-700 transition-colors text-sm sm:text-base"
                 onClick={handleRemoveAdmin}
               >
                 Remove
@@ -826,11 +826,11 @@ const ManageAdmin = () => {
             className="bg-white rounded-[11px] shadow-lg w-full max-w-md sm:w-[400px] p-4 sm:p-6 max-h-[90vh] overflow-y-auto"
           >
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg sm:text-[20px] font-semibold text-[#6A7368]">
+              <h2 className="text-lg sm:text-[20px] font-semibold text-[#003087]">
                 Change Password
               </h2>
               <AiOutlineClose
-                className="text-xl sm:text-[20px] text-[#6A7368] cursor-pointer hover:text-[#043D12] transition-colors"
+                className="text-xl sm:text-[20px] text-[#003087] cursor-pointer hover:text-[#003087] transition-colors"
                 onClick={() => {
                   setIsResetModalOpen(false);
                   setResetUser(null);
@@ -846,7 +846,7 @@ const ManageAdmin = () => {
             <form onSubmit={handleResetPasswordSubmit}>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm sm:text-[14px] text-[#6A7368] mb-1">
+                  <label className="block text-sm sm:text-[14px] text-[#003087] mb-1">
                     Current Password
                   </label>
                   <div className="relative">
@@ -859,9 +859,9 @@ const ManageAdmin = () => {
                       className="w-full h-10 sm:h-[42px] px-3 sm:px-4 border-[1px] border-[#6A7368] rounded-[11px] outline-0 bg-transparent text-sm sm:text-base"
                       required
                     />
-                    <FiKey className="absolute right-10 top-1/2 transform -translate-y-1/2 text-[#6A7368]" />
+                    <FiKey className="absolute right-10 top-1/2 transform -translate-y-1/2 text-[#003087]" />
                     <span
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#6A7368]"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#003087]"
                       onClick={() =>
                         setShowCurrentPassword(!showCurrentPassword)
                       }
@@ -871,7 +871,7 @@ const ManageAdmin = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm sm:text-[14px] text-[#6A7368] mb-1">
+                  <label className="block text-sm sm:text-[14px] text-[#003087] mb-1">
                     New Password
                   </label>
                   <div className="relative">
@@ -884,9 +884,9 @@ const ManageAdmin = () => {
                       className="w-full h-10 sm:h-[42px] px-3 sm:px-4 border-[1px] border-[#6A7368] rounded-[11px] outline-0 bg-transparent text-sm sm:text-base"
                       required
                     />
-                    <FiKey className="absolute right-10 top-1/2 transform -translate-y-1/2 text-[#6A7368]" />
+                    <FiKey className="absolute right-10 top-1/2 transform -translate-y-1/2 text-[#003087]" />
                     <span
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#6A7368]"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#003087]"
                       onClick={() => setShowNewPassword(!showNewPassword)}
                     >
                       {showNewPassword ? <FiEyeOff /> : <FiEye />}
@@ -894,7 +894,7 @@ const ManageAdmin = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm sm:text-[14px] text-[#6A7368] mb-1">
+                  <label className="block text-sm sm:text-[14px] text-[#003087] mb-1">
                     Confirm New Password
                   </label>
                   <div className="relative">
@@ -907,9 +907,9 @@ const ManageAdmin = () => {
                       className="w-full h-10 sm:h-[42px] px-3 sm:px-4 border-[1px] border-[#6A7368] rounded-[11px] outline-0 bg-transparent text-sm sm:text-base"
                       required
                     />
-                    <FiKey className="absolute right-10 top-1/2 transform -translate-y-1/2 text-[#6A7368]" />
+                    <FiKey className="absolute right-10 top-1/2 transform -translate-y-1/2 text-[#003087]" />
                     <span
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#6A7368]"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#003087]"
                       onClick={() =>
                         setShowConfirmNewPassword(!showConfirmNewPassword)
                       }
@@ -938,7 +938,7 @@ const ManageAdmin = () => {
                 )}
                 <button
                   type="submit"
-                  className="w-full mt-4 px-4 py-2 bg-[#043D12] text-[#FFFDF2] rounded-[11px] hover:bg-[#032d0e] transition-colors text-sm sm:text-base flex items-center justify-center"
+                  className="w-full mt-4 px-4 py-2 bg-[#003087] text-[#FEFEFF] rounded-[11px] hover:bg-[#003087] transition-colors text-sm sm:text-base flex items-center justify-center"
                   disabled={
                     passwordValidation !== "Password is valid" || isSubmitting
                   }
@@ -946,7 +946,7 @@ const ManageAdmin = () => {
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
                       <svg
-                        className="animate-spin h-5 w-5 text-[#FFFDF2]"
+                        className="animate-spin h-5 w-5 text-[#FEFEFF]"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"

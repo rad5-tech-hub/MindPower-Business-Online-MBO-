@@ -351,9 +351,9 @@ const BusinessProfile2 = () => {
       </style>
 
       {/* Left Section (Hidden on Mobile) */}
-      <div className="max-lg:hidden w-full h-full flex justify-center items-center bg-[url('/Group2.svg')] bg-cover bg-center bg-green-800">
+      <div className="max-lg:hidden w-full h-full flex justify-center items-center bg-[url('/Group2.svg')] bg-cover bg-center bg-[#003087]">
         <div className="w-full h-[90%] flex flex-col items-center">
-          <div className="container px-[5vw] mx-auto text-[#FFFDF2] mt-8">
+          <div className="container px-[5vw] mx-auto text-[#FEFEFF] mt-8">
             <Link
               to="/"
               className="lg:text-[50px] text-[32px] font-medium leading-[70px]"
@@ -368,7 +368,7 @@ const BusinessProfile2 = () => {
       </div>
 
       {/* Right Section (Form) */}
-      <div className="relative max-lg:w-full flex flex-col items-center lg:justify-center bg-[#FFFDF2] max-md:bg-[url('/bg-login.svg')] bg-cover bg-center">
+      <div className="relative max-lg:w-full flex flex-col items-center lg:justify-center bg-[#FEFEFF] max-md:bg-[url('/bg-login.svg')] bg-cover bg-center">
         <div className="container px-[5vw] mx-auto h-fit max-lg:mt-20">
           {/* Back Button */}
           <Link
@@ -376,7 +376,7 @@ const BusinessProfile2 = () => {
             className="w-fit h-fit absolute top-0 left-0"
           >
             <motion.p
-              className="text-white rounded-lg shadow-lg border border-[#043D12] bg-[#043D12] m-2 px-2 py-1 text-[15px]"
+              className="text-white rounded-lg shadow-lg border border-[#043D12] bg-[#003087] m-2 px-2 py-1 text-[15px]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -384,7 +384,7 @@ const BusinessProfile2 = () => {
             </motion.p>
           </Link>
           {/* Step Indicator */}
-          <div className="absolute top-0 right-0 m-2 text-[#043D12] font-medium">
+          <div className="absolute top-0 right-0 m-2 text-[#003087] font-medium">
             2 of 2
           </div>
           {/* Logo */}
@@ -394,7 +394,7 @@ const BusinessProfile2 = () => {
           >
             MBO
           </Link>
-          <h4 className="lg:text-[32px] text-[20px] font-medium text-[#043D12] flex items-center gap-2">
+          <h4 className="lg:text-[32px] text-[20px] font-medium text-[#003087] flex items-center gap-2">
             Set Up Business Profile <Hand />
           </h4>
 
@@ -405,11 +405,11 @@ const BusinessProfile2 = () => {
           >
             {/* WhatsApp Number Input */}
             <div className="max-lg:w-full flex flex-col gap-2">
-              <label className="text-[#043D12] text-sm font-medium">
+              <label className="text-[#003087] text-sm font-medium">
                 WhatsApp Number <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-2 border-[1px] rounded-[27px] px-4 border-[#363636] h-[48px] lg:h-[60px] bg-white shadow-sm">
-                <BsPerson className="text-[#6A7368]" />
+                <BsPerson className="text-[#003087]" />
                 <PhoneInput
                   international
                   countryCallingCodeEditable={false}
@@ -429,11 +429,11 @@ const BusinessProfile2 = () => {
 
             {/* Alternative Number Input */}
             <div className="max-lg:w-full flex flex-col gap-2">
-              <label className="text-[#043D12] text-sm font-medium">
+              <label className="text-[#003087] text-sm font-medium">
                 Alternative Number (Optional)
               </label>
               <div className="flex items-center gap-2 border-[1px] rounded-[27px] px-4 border-[#363636] h-[48px] lg:h-[60px] bg-white shadow-sm">
-                <BsPerson className="text-[#6A7368]" />
+                <BsPerson className="text-[#003087]" />
                 <PhoneInput
                   international
                   countryCallingCodeEditable={false}
@@ -453,18 +453,18 @@ const BusinessProfile2 = () => {
 
             {/* Location Input */}
             <div className="max-lg:w-full flex flex-col gap-2">
-              <label className="text-[#043D12] text-sm font-medium">
+              <label className="text-[#003087] text-sm font-medium">
                 Location <span className="text-red-500">*</span>
               </label>
               <div className="border-[1px] rounded-[27px] px-8 border-[#363636] flex items-center gap-2 lg:h-[60px] h-[48px] bg-white shadow-sm">
-                <IoLocationOutline className="text-[#6A7368]" />
+                <IoLocationOutline className="text-[#003087]" />
                 <input
                   type="text"
                   required
                   placeholder="e.g., Lagos, Nigeria"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
-                  className="w-full h-full border-none focus:outline-none text-[#6A7368] placeholder-[#6A7368]/70 text-[14px]"
+                  className="w-full h-full border-none focus:outline-none text-[#003087] placeholder-[#6A7368]/70 text-[14px]"
                 />
               </div>
             </div>
@@ -475,11 +475,11 @@ const BusinessProfile2 = () => {
               disabled={loading}
               whileHover={{ scale: loading ? 1 : 1.05 }}
               whileTap={{ scale: loading ? 1 : 0.95 }}
-              className={`md:mt-6 mt-16 w-full text-[#FFFDF2] bg-[#043D12] hover:bg-[#032d0e] shadow-lg rounded-[27px] px-8 flex justify-center items-center lg:h-[60px] h-[48px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300`}
+              className={`md:mt-6 mt-16 w-full text-[#FEFEFF] bg-[#003087] hover:bg-[#003087] shadow-lg rounded-[27px] px-8 flex justify-center items-center lg:h-[60px] h-[48px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300`}
             >
               {loading ? (
                 <div className="flex items-center">
-                  <div className="w-5 h-5 border-2 border-t-[#FFFDF2] border-[#043D12] rounded-full animate-spin"></div>
+                  <div className="w-5 h-5 border-2 border-t-[#FEFEFF] border-[#043D12] rounded-full animate-spin"></div>
                   <span className="ml-2">Submitting...</span>
                 </div>
               ) : (
