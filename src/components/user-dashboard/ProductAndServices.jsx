@@ -293,7 +293,7 @@ const ProductAndServices = () => {
             Product & Services
           </p>
           <button
-            className={`text-[14px] border-[1px] rounded-full shadow px-5 py-2.5 flex items-center gap-2 border-[#043D12] bg-[#003087] text-white hover:bg-[#03280E] transition-all duration-300 cursor-pointer ${
+            className={`text-[14px] border-[1px] rounded-full shadow px-5 py-2.5 flex items-center gap-2 border-[#043D12] bg-[#003087] text-white hover:bg-[#003087] transition-all duration-300 cursor-pointer ${
               uploading ? "cursor-not-allowed opacity-60" : ""
             }`}
             onClick={() => {
@@ -369,7 +369,7 @@ const ProductAndServices = () => {
               product to kick things off!
             </p>
             <button
-              className="text-[14px] border-[1px] rounded-full shadow px-6 py-3 flex items-center gap-2 border-[#043D12] bg-[#003087] text-white hover:bg-[#03280E] transition-all duration-300"
+              className="text-[14px] border-[1px] rounded-full shadow px-6 py-3 flex items-center gap-2 border-[#043D12] bg-[#003087] text-white hover:bg-[#003087] transition-all duration-300"
               onClick={() => {
                 if (!uploading) {
                   const fileInput = document.createElement("input");
@@ -445,7 +445,7 @@ const ProductAndServices = () => {
                 <button
                   className={`px-6 py-2.5 rounded-lg font-medium transition-colors duration-200 cursor-pointer ${
                     newName.trim() && newDescription.trim()
-                      ? "bg-[#003087] text-white hover:bg-[#03280E]"
+                      ? "bg-[#003087] text-white hover:bg-[#003087]"
                       : "bg-gray-300 text-gray-500 cursor-not-allowed"
                   }`}
                   onClick={handleSaveEdit}
@@ -508,7 +508,7 @@ const ProductAndServices = () => {
                 </button>
                 <a
                   href="/subscribe" // Adjust the URL to match your subscription page route
-                  className="px-6 py-2.5 bg-[#003087] text-white rounded-lg hover:bg-[#03280E] transition-colors duration-200 font-medium cursor-pointer"
+                  className="px-6 py-2.5 bg-[#003087] text-white rounded-lg hover:bg-[#003087] transition-colors duration-200 font-medium cursor-pointer"
                 >
                   Subscribe Now
                 </a>

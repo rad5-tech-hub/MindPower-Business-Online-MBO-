@@ -879,7 +879,7 @@ const Profile = () => {
               </button>
               <a
                 href="/subscribe" // Adjust if your subscription route is different
-                className="px-6 py-2.5 bg-[#003087] text-white rounded-lg hover:bg-[#03280E] transition-colors duration-200 font-medium cursor-pointer"
+                className="px-6 py-2.5 bg-[#003087] text-white rounded-lg hover:bg-[#003087] transition-colors duration-200 font-medium cursor-pointer"
               >
                 Subscribe Now
               </a>

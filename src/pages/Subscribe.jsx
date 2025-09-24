@@ -8,7 +8,7 @@ import Good from "../components/svgs/Good";
 import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import MboLogo from "../../src/assets/mindpower-logo.svg";
-import bgImage from "../../src/assets/verifybg.jpeg";
+// import bgImage from "../../src/assets/verifybg.jpeg";
 import {
   CheckCircleIcon,
   RocketLaunchIcon,
@@ -804,10 +804,8 @@ const Subscribe = () => {
 
   return (
     <div
-      className="w-full min-h-screen flex flex-col justify-center items-center py-16 bg-cover bg-center"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${bgImage})`,
-      }}
+      className="w-full min-h-screen flex flex-col justify-center items-center py-16 bg-cover bg-center bg-[#003087]"
+    
     >
       <style>
         {`

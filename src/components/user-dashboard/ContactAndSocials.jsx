@@ -463,7 +463,7 @@ const ContactAndSocials = () => {
                   Cancel
                 </button>
                 <button
-                  className="px-4 py-2 bg-[#003087] text-white rounded hover:bg-[#03280E]"
+                  className="px-4 py-2 bg-[#003087] text-white rounded hover:bg-[#003087]"
                   onClick={() => handleSocialSubmit(showSocialModal)}
                 >
                   {profileData.socialLinks[showSocialModal] ? "Update" : "Save"}
