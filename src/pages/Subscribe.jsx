@@ -35,7 +35,7 @@ const formatPrice = (price) => {
 };
 
 const PUBLIC_KEY = import.meta.env.VITE_FLUTTERWAVE_PUBLIC_KEY;
-const MAIN_URL = import.meta.env.VITE_BASE_URL;
+const MAIN_URL = import.meta.env.VITE_BASE_URL_MAIN;
 const SUBACCOUNT_ID = "RS_3B38D8439E07F7FACC77DEDC01FACE59";
 
 const IntroModal = ({
